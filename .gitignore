@@ -67,3 +67,7 @@ public/site-media/**
 # Design references (local)
 _ref/
 
+# Local scratch
+tmp-body.html
+tmp-*.html
+
