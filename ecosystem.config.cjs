@@ -5,7 +5,7 @@
  */
 const path = require('path')
 
-const appName = process.env.APP_NAME || 'guanzi'
+const appName = process.env.APP_NAME || 'guanzi_2'
 const root = __dirname
 
 module.exports = {
