@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>页面-光子文化传媒 GUANZI</title>
+    <meta name="description" content="北京光子文化传媒有限公司专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700&family=Poppins:wght@400;500;600&family=Raleway:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body class="page-generic page-light">
+    <header class="header" id="header" data-chrome="nav">
+      <div class="header-box">
+        <h1 class="logo">
+          <a href="/">
+            <span class="logo-text">
+              <span class="logo-en" data-bind="global.brandName">GUANZI</span>
+              <span class="logo-zh" data-bind="global.brandSub">光子文化传媒</span>
+            </span>
+          </a>
+        </h1>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="打开菜单">
+          <span class="sp1"></span>
+          <span class="sp2"></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="/service.html">服务</a></li>
+            <li><a href="/case.html">案例</a></li>
+            <li><a href="/about.html">关于</a></li>
+          </ul>
+        </nav>
+        <div class="top-right">
+          <a href="/news.html" class="link1">新闻</a>
+          <a href="/contact.html" class="link1">联系</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="gnavi-wrap" id="gnavi" aria-hidden="true">
+      <p class="gnavi-bg"></p>
+      <div class="gnavi-box">
+        <ul class="gnavi" data-list="global.menu">
+          <li>
+            <a href="/" class="gnavi-link">
+              <span class="ja"><span class="ja1">首页</span><span class="ja2">首页</span></span>
+              <span class="en">HOME</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-cursor" id="menuCursor" aria-hidden="true"></div>
+    </nav>
+
+    <main class="warp-page">
+      <!-- 通用壳：内容全部由菜单组装组件挂载 -->
+      <div id="pageComposeRoot" class="page-compose-root"></div>
+    </main>
+
+    <footer class="footer" data-chrome="footer">
+      <div class="footer-box">
+        <div class="footer-top">
+          <div class="footer-left">
+            <h2 class="reveal"><span data-bind="global.footer.title">LET'S CREATE TOGETHER</span></h2>
+            <p class="lead reveal" data-bind-html="global.footer.lead">
+              Guanzi Media helps brands tell powerful stories<br />
+              and earn lasting cultural resonance.
+            </p>
+          </div>
+          <div class="footer-right" data-list="global.footer.offices"></div>
+        </div>
+        <div class="footer-bottom">
+          <div class="brand reveal">
+            <h3 data-bind="global.footer.brand">GUANZI.</h3>
+            <p data-bind="global.footer.copyright">© 2016 – 2026 北京光子文化传媒有限公司</p>
+          </div>
+          <ul class="social reveal">
+            <li><a href="#" aria-label="Instagram">IG</a></li>
+            <li><a href="#" aria-label="Behance">Be</a></li>
+            <li><a href="#" aria-label="Twitter">X</a></li>
+            <li><a href="#" aria-label="Facebook">Fb</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener" data-bind="global.footer.beian">京ICP备XXXXXXXX号</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

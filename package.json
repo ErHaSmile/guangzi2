@@ -1,0 +1,31 @@
+{
+  "name": "guanzi-2-mcn-site",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -k -n api,web -c cyan,magenta \"npm:api\" \"node scripts/wait-api.mjs && vite\"",
+    "api": "node server/index.js",
+    "start": "node server/index.js",
+    "db:migrate": "node server/migrate.js",
+    "media:migrate": "node server/scripts/backup-and-migrate-media.mjs",
+    "build": "vite build",
+    "preview": "vite preview",
+    "admin": "concurrently -k -n api,web -c cyan,magenta \"npm:api\" \"node scripts/wait-api.mjs && vite --open /admin.html\"",
+    "server:setup": "bash ./scripts/server-setup.sh",
+    "server:update": "bash ./scripts/server-update.sh",
+    "server:bootstrap": "bash ./scripts/server-bootstrap.sh"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "guanzi-2-mcn-site": "file:",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "vite": "^5.4.11"
+  }
+}

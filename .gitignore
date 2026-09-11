@@ -1,0 +1,69 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+
+# Reference dumps / local clones
+_local/
+_ref.html
+_ref_style.css
+_ref_*.html
+_ref_*.js
+_ref_*.css
+_kingtin_*
+经天网络官网-预览包/
+光子文化官网-客户预览包/
+光子文化官网-客户预览包.zip
+guanzi-deploy/
+guanzi-deploy.zip
+
+# Runtime uploads (keep dirs via .gitkeep if needed)
+public/images/uploads/*
+!public/images/uploads/.gitkeep
+public/videos/uploads/*
+!public/videos/uploads/.gitkeep
+
+# Server runtime
+logs/*
+!logs/.gitkeep
+*.pid
+guanzi.log
+
+# Contact form submissions
+data/contact-leads.json
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# May contain credentials — keep local only
+项目描述.txt
+
+backups/
+
+# 素材库 / 官网发布区（本地管理，不进仓库）
+public/library/**
+!public/library/.gitkeep
+public/site-media/**
+!public/site-media/.gitkeep
+
+
+
+# Design references (local)
+_ref/
+

@@ -1,0 +1,464 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>北京光子文化传媒有限公司 GUANZI-影视策划_广告制作_品牌传播_活动展览</title>
+    <meta name="description" content="北京光子文化传媒有限公司专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&family=Montserrat:wght@700&family=Poppins:wght@400;600&family=Raleway:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preload" as="video" href="/videos/home-hero.mp4" type="video/mp4" />
+  </head>
+  <body class="page-home">
+    <header class="header" id="header" data-chrome="nav">
+      <div class="header-box">
+        <h1 class="logo">
+          <a href="/">
+            <span class="logo-text">
+              <span class="logo-en" data-bind="global.brandName">GUANZI</span>
+              <span class="logo-zh" data-bind="global.brandSub">光子文化传媒</span>
+            </span>
+          </a>
+        </h1>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="打开菜单">
+          <span class="sp1"></span>
+          <span class="sp2"></span>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="/service.html">服务</a></li>
+            <li><a href="/case.html">案例</a></li>
+            <li><a href="/about.html">关于</a></li>
+          </ul>
+        </nav>
+        <div class="top-right">
+          <a href="/news.html" class="link1">新闻</a>
+          <a href="/contact.html" class="link1">联系</a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="gnavi-wrap" id="gnavi" aria-hidden="true">
+      <p class="gnavi-bg"></p>
+      <div class="gnavi-box">
+        <ul class="gnavi" data-list="global.menu">
+          <li>
+            <a href="/" class="gnavi-link">
+              <span class="ja"><span class="ja1">首页</span><span class="ja2">首页</span></span>
+              <span class="en">HOME</span>
+            </a>
+          </li>
+          <li>
+            <a href="/about.html" class="gnavi-link">
+              <span class="ja"><span class="ja1">ABOUT・光子</span><span class="ja2">ABOUT・光子</span></span>
+              <span class="en">About Guanzi Media</span>
+            </a>
+          </li>
+          <li>
+            <a href="/service.html" class="gnavi-link">
+              <span class="ja"><span class="ja1">SERVICE・服务项目</span><span class="ja2">SERVICE・服务项目</span></span>
+              <span class="en">What We Do</span>
+            </a>
+          </li>
+          <li>
+            <a href="/news.html" class="gnavi-link">
+              <span class="ja"><span class="ja1">NEWS・新闻资讯</span><span class="ja2">NEWS・新闻资讯</span></span>
+              <span class="en">What's New</span>
+            </a>
+          </li>
+          <li>
+            <a href="/case.html" class="gnavi-link">
+              <span class="ja"><span class="ja1">CASE・设计案例</span><span class="ja2">CASE・设计案例</span></span>
+              <span class="en">Our Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact.html" class="gnavi-link">
+              <span class="ja"><span class="ja1">CONTACT・联系方式</span><span class="ja2">CONTACT・联系方式</span></span>
+              <span class="en">Contact Us</span>
+            </a>
+          </li>
+          <li>
+            <a href="/contact.html#feedback" class="gnavi-link">
+              <span class="ja"><span class="ja1">SUBMIT・提交需求</span><span class="ja2">SUBMIT・提交需求</span></span>
+              <span class="en">Requirement Submission</span>
+            </a>
+          </li>
+          <li>
+            <a href="tel:010-8596-8820" class="gnavi-link">
+              <span class="ja"><span class="ja1">TEL：010-8596-8820</span><span class="ja2">TEL：010-8596-8820</span></span>
+              <span class="en">Call Us Now</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="menu-cursor" id="menuCursor" aria-hidden="true"></div>
+    </nav>
+
+
+    <main class="home-main">
+    <section class="home-hero" id="homeHero" data-home-block="hero" data-compose-unit="home-hero">
+      <div class="home-hero-media">
+        <video
+          muted
+          autoplay
+          loop
+          playsinline
+          preload="auto"
+          fetchpriority="high"
+          id="homeVideo"
+          disablePictureInPicture
+        >
+          <source data-bind="pages.home.video" src="/videos/home-hero.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="home-hero-content">
+        <h2 class="home-title" data-bind="pages.home.heroTitle">Creative Media</h2>
+        <p class="home-subtitle" data-bind="pages.home.heroSubtitle">以光为媒，让品牌故事被看见、被记住</p>
+      </div>
+      <button type="button" class="home-sound-toggle is-muted" id="homeSoundToggle" aria-pressed="false" aria-label="开启声音">
+        <span class="home-sound-orb" aria-hidden="true">
+          <span class="home-sound-icon">
+            <svg class="icon-on" viewBox="0 0 24 24" width="18" height="18" fill="none">
+              <path d="M4 9.5v5h3.2L12 18V6L7.2 9.5H4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+            </svg>
+            <svg class="icon-off" viewBox="0 0 24 24" width="18" height="18" fill="none">
+              <path d="M4 9.5v5h3.2L12 18V6L7.2 9.5H4z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+              <path d="M15.2 9.8l4 4.4M19.2 9.8l-4 4.4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </span>
+        </span>
+        <span class="home-sound-copy">
+          <span class="home-sound-kicker">Sound</span>
+          <span class="home-sound-label">Off</span>
+        </span>
+      </button>
+      <a href="#sectionWho" class="scroll-down" aria-label="向下滚动">
+        <svg viewBox="0 0 1024 1024" width="32" height="32" aria-hidden="true">
+          <path
+            d="M966.4 323.2c-9.6-9.6-25.6-9.6-35.2 0l-416 416-425.6-416c-9.6-9.6-25.6-9.6-35.2 0-9.6 9.6-9.6 25.6 0 35.2l441.6 432c9.6 9.6 25.6 9.6 35.2 0l435.2-432C976 345.6 976 332.8 966.4 323.2z"
+            fill="#ffffff"
+          ></path>
+        </svg>
+      </a>
+    </section>
+      <section class="home-section" id="sectionWho" data-home-block="who" data-compose-unit="home-who">
+        <div class="home-wrap">
+          <h2 class="home-specialty-title reveal" data-bind-html="pages.home.specialtyTitle">
+            内容、影视与品牌体验。<br />
+            这是我们的专长。
+          </h2>
+
+          <div class="home-who-grid">
+            <div class="home-who-left">
+              <div class="home-who-left-rolls">
+                <p class="home-who-label reveal" data-bind="pages.home.whoLabel">[ 关于我们 ]</p>
+                <div class="home-client-rolls reveal">
+                  <div class="home-roll" data-roll-col="a">
+                    <div class="home-roll-track" data-list="pages.home.clientRollA"></div>
+                  </div>
+                  <div class="home-roll is-reverse" data-roll-col="b">
+                    <div class="home-roll-track" data-list="pages.home.clientRollB"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="home-who-left-image reveal">
+                <img data-bind="pages.home.whoLeftImage" alt="" />
+              </div>
+            </div>
+            <div>
+              <h3 class="home-intro-title reveal" data-bind-html="pages.home.introTitle">
+                多年来，我们已为多家<a href="/case.html">品牌客户</a>及<a href="/case.html">机构伙伴</a>提供传媒与创意服务
+              </h3>
+              <div class="home-intro-text reveal" data-bind-html="pages.home.introText">
+                北京光子文化传媒专注影视策划、广告制作、品牌叙事与体验活动。<br /><br />
+                我们提供企业宣传片、商业广告、展览体验、数字内容与整合品牌传播等高品质服务。<br /><br />
+                从洞察到落地执行，我们帮助品牌以清晰而有感染力的方式表达文化。<br /><br />
+                聊聊你的下一个项目…
+              </div>
+            </div>
+          </div>
+
+          <div class="home-logo-grid reveal" data-list="pages.home.clientLogos"></div>
+        </div>
+      </section>
+
+      <section class="home-section home-dark home-how-section" id="sectionWhat" data-home-block="what" data-compose-unit="home-what">
+        <div class="home-wrap home-how-wrap">
+          <div class="home-how">
+            <div class="home-how-left">
+              <p class="home-eyebrow" data-bind="pages.home.whatEyebrow">WHAT WE DO</p>
+              <h2 class="home-how-title" data-bind="pages.home.whatTitle">全链路创意传媒服务</h2>
+              <p class="home-how-desc" data-bind="pages.home.whatDesc">
+                以创新的设计理念和精湛的技术实现客户的个性化需求。我们不仅仅是设计师，更是您的合作伙伴，为您提供全方位的支持和帮助，共同打造一流的项目。
+              </p>
+              <a class="home-btn home-btn-light" href="/service.html">
+                <span data-bind="pages.home.whatCta">探索更多</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"></path></svg>
+              </a>
+            </div>
+            <div class="home-how-stack" data-list="pages.home.whatItems"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-cases-section" id="homeCases" data-home-block="cases" data-compose-unit="home-cases">
+        <div class="home-case-sticky">
+          <div class="home-case-inner">
+            <div class="home-case-head">
+              <h2 data-bind="pages.home.casesTitle">案例集</h2>
+              <p data-bind="pages.home.casesDesc">
+                Our cases demonstrate our design concepts and technical strength, and also prove our good cooperation and trust with our customers.
+              </p>
+            </div>
+            <div class="home-case-viewport">
+              <div class="home-case-rail" data-list="pages.home.cases" id="homeCaseRail"></div>
+            </div>
+            <div class="home-case-scrollbar" aria-hidden="true">
+              <div class="home-case-scrollbar-thumb" id="homeCaseThumb"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-dark home-overseas-section" id="homeOverseas" data-home-block="overseas" data-compose-unit="home-overseas">
+        <div class="home-wrap">
+          <div class="home-section-head home-overseas-head">
+            <h2 class="reveal" data-bind="pages.home.overseasTitle">跨界传播</h2>
+            <p class="reveal" data-bind="pages.home.overseasDesc">
+              我们拥有多年的海外推广经验和专业技能，了解海外市场的需求和文化背景，能够为客户构建国际化的网站，完善的功能和优秀的设计将帮助客户实现全球化业务。
+            </p>
+            <a class="home-btn home-btn-light reveal" href="/case.html">
+              <span data-bind="pages.home.overseasCta">查看相关案例</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.01 11H4v2h12.01v3L20 12l-3.99-4v3z"></path></svg>
+            </a>
+          </div>
+          <ul class="home-overseas-list" data-list="pages.home.overseas"></ul>
+        </div>
+      </section>
+
+      <section class="home-section home-dev-section" id="homeMobile" data-home-block="mobile" data-compose-unit="home-mobile">
+        <div class="home-wrap">
+          <div class="home-section-head home-dev-head">
+            <h2 class="reveal" data-bind="pages.home.mobileTitle">新媒体内容开发</h2>
+            <p class="reveal" data-bind="pages.home.mobileDesc">
+              围绕短视频、直播切片与社交传播，我们为客户提供从选题策划、脚本创作到成片包装的一站式内容生产。
+            </p>
+          </div>
+          <h5 class="home-dev-label reveal" data-bind="pages.home.mobileLabel">Content</h5>
+          <ul class="home-dev-tags reveal" data-list="pages.home.mobileTags"></ul>
+          <div class="home-media-block home-dev-media reveal">
+            <div class="home-media-frame is-playable" data-video-play>
+              <video muted loop playsinline preload="metadata" id="homeMobileVideo" disablePictureInPicture>
+                <source data-bind="pages.home.mobileVideo" src="/videos/web/4kQUrEG9jUUA.mp4" type="video/mp4" />
+              </video>
+              <button type="button" class="home-media-play" aria-label="进入播放模式">
+                <span class="home-media-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M8 5.5v13l11-6.5L8 5.5z"/></svg>
+                </span>
+                <span class="home-media-play-text">播放</span>
+              </button>
+            </div>
+            <div class="home-media-caption">
+              <h3 data-bind="pages.home.mobileCaptionTitle">内容为王，表达为先</h3>
+              <div class="home-media-caption-side">
+                <p data-bind="pages.home.mobileCaptionText">我们关注平台语境与用户注意力，用专业制作能力帮助品牌在碎片化传播中保持品质与辨识度。</p>
+                <a class="home-cta" href="/contact.html#feedback">
+                  <span data-bind="pages.home.mobileCta">需求提交</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M21.24 12.192L12.248 4L11.16 5.312L17.816 11.296H3V13.088H17.784L11.16 19.072L12.248 20.384L21.24 12.192Z" fill="currentColor" transform="rotate(-45 12 12)"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-dark" id="homeAd" data-home-block="ad" data-compose-unit="home-ad">
+        <div class="home-wrap">
+          <div class="home-section-head">
+            <h2 class="reveal" data-bind="pages.home.adTitle">广告与影像拍摄</h2>
+            <p class="reveal" data-bind="pages.home.adDesc">
+              我们注重传达品牌的核心价值与文化气质，结合美学与制作工艺，输出有感染力的商业影像，让品牌形象深入人心。
+            </p>
+          </div>
+          <div class="home-media-block reveal">
+            <div class="home-media-frame is-playable" data-video-play>
+              <video muted loop playsinline preload="metadata" id="homeAdVideo" disablePictureInPicture>
+                <source data-bind="pages.home.adVideo" src="/videos/web/contact.mp4" type="video/mp4" />
+              </video>
+              <button type="button" class="home-media-play" aria-label="进入播放模式">
+                <span class="home-media-play-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="28" height="28"><path fill="currentColor" d="M8 5.5v13l11-6.5L8 5.5z"/></svg>
+                </span>
+                <span class="home-media-play-text">播放</span>
+              </button>
+            </div>
+            <div class="home-media-caption">
+              <h3 data-bind="pages.home.adCaptionTitle">Advertisement.</h3>
+              <div>
+                <p data-bind="pages.home.adCaptionText">从前置策略到现场拍摄与后期调色，光子文化以完整制作链路呈现客户的品牌故事与商业价值。</p>
+                <a class="home-link" href="/contact.html" data-bind="pages.home.adCta">联系我们</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-kol-section" id="homeKol" data-home-block="kol" data-compose-unit="home-kol">
+        <div class="home-wrap">
+          <div class="home-section-head home-kol-head reveal">
+            <h2 class="home-kol-title" data-bind="pages.home.kolTitle">星图&amp;小红书KOL达人资源</h2>
+            <p class="home-kol-lead" data-bind="pages.home.kolLead">抖音&amp;小红书全国达人资源超50万+</p>
+          </div>
+          <div class="home-kol-body">
+            <aside class="home-kol-aside reveal" data-list="pages.home.kolStats"></aside>
+            <div class="home-kol-grid reveal" data-list="pages.home.kolCategories"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-streamer-section" id="homeStreamer" data-home-block="streamer" data-compose-unit="home-streamer">
+        <div class="home-wrap">
+          <div class="home-streamer-panel reveal">
+            <div class="home-streamer-copy-col">
+              <p class="home-eyebrow">TALENT</p>
+              <h2 class="home-streamer-title" data-bind="pages.home.streamerTitle">主播资源</h2>
+              <p class="home-streamer-desc" data-bind="pages.home.streamerDesc">
+                拥有40+头部主播核心引擎，涵盖主持、达人、创作者等多维类型。通过品牌DNA拆解与数据算法，精准匹配主播与品牌，实现内容效率与商业转化双提升。
+              </p>
+            </div>
+            <div class="home-streamer-gallery" data-list="pages.home.streamerImages"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-venue-section" id="homeVenue" data-home-block="venue" data-compose-unit="home-venue">
+        <div class="home-wrap">
+          <div class="home-section-head home-venue-head reveal">
+            <div class="home-venue-title-col">
+              <h2 class="home-venue-title" data-bind="pages.home.venueTitle">设备场地</h2>
+            </div>
+            <div class="home-venue-desc" data-bind-html="pages.home.venueDesc">
+              影视影棚签约合作，支持创意场景拍摄<br />
+              影视设备搭配定制化高级感场景，做到场景与设备，内容与玩法MIX体验
+            </div>
+          </div>
+          <div class="home-venue-gallery reveal" data-list="pages.home.venueImages"></div>
+        </div>
+      </section>
+
+      <section class="home-section home-local-section" id="homeLocal" data-home-block="local" data-compose-unit="home-local">
+        <div class="home-wrap">
+          <div class="home-section-head home-local-title-row reveal">
+            <h2 class="home-local-title" data-bind="pages.home.localTitle">本地达人资源</h2>
+          </div>
+          <div class="home-local-groups reveal" data-list="pages.home.localGroups"></div>
+          <div class="home-local-foot reveal">
+            <div class="home-local-foot-main">
+              <p class="home-local-client">
+                <span data-bind="pages.home.localClientPrefix">2025年为</span>
+                <strong data-bind="pages.home.localClientValue">50+</strong>
+                <span data-bind="pages.home.localClientSuffix">客户</span>
+              </p>
+              <p class="home-local-brands" data-bind="pages.home.localBrands">（海底捞、Meland、美的、元气森林、完美日记等）</p>
+              <div class="home-local-lines" data-list="pages.home.localStatLines"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-clients-section" id="homeClients" data-home-block="clients" data-compose-unit="home-clients">
+        <div class="home-clients-bg" aria-hidden="true"></div>
+        <div class="home-wrap home-clients-inner">
+          <div class="home-clients-head reveal">
+            <div class="home-clients-heading">
+              <p class="home-clients-eyebrow" data-bind="pages.home.clientsTitleEn">COOPERATIVE CLIENTS.</p>
+              <h2 class="home-clients-title" data-bind="pages.home.clientsTitle">合作客户</h2>
+            </div>
+            <div class="home-clients-note">
+              <span class="home-clients-brand" data-bind="pages.home.clientsBrandMark">品牌矩阵</span>
+              <span class="home-clients-rank" data-bind="pages.home.clientsRankNote">排名不分先后</span>
+            </div>
+          </div>
+          <div class="home-clients-groups reveal" data-list="pages.home.clientsGroups"></div>
+        </div>
+      </section>
+
+      <section
+        class="home-section home-gallery-section"
+        id="homeGallery"
+        data-gallery-template
+        data-compose-unit="home-gallery"
+        hidden
+      >
+        <div class="home-wrap home-gallery-wrap">
+          <h2 class="home-gallery-title reveal" data-gallery-title></h2>
+          <div class="home-gallery-grid reveal" data-gallery-grid></div>
+        </div>
+      </section>
+
+      <section class="home-section home-news-section" id="homeNews" data-home-block="news" data-compose-unit="home-news">
+        <div class="home-news-box">
+          <h2 class="home-news-title reveal">
+            <span class="en" data-bind="pages.home.newsTitleEn">News</span>
+            <span class="zh" data-bind="pages.home.newsTitleZh">新闻资讯</span>
+          </h2>
+
+          <div class="home-news-body">
+            <aside class="home-news-menu">
+              <ul class="home-news-cats" data-list="pages.home.newsCategories" id="homeNewsCats"></ul>
+            </aside>
+            <div class="home-news-main">
+              <div class="home-news-grid" data-list="pages.home.news" id="homeNewsGrid"></div>
+            </div>
+          </div>
+
+          <div class="home-news-actions reveal">
+            <a class="home-cta" href="/news.html">
+              <span data-bind="pages.home.newsMore">查看更多</span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M21.24 12.192L12.248 4L11.16 5.312L17.816 11.296H3V13.088H17.784L11.16 19.072L12.248 20.384L21.24 12.192Z" fill="currentColor" transform="rotate(-45 12 12)"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contact" data-chrome="footer">
+      <div class="footer-box">
+        <div class="footer-top">
+          <div class="footer-left">
+            <h2 class="reveal"><span data-bind="global.footer.title">LET'S CREATE TOGETHER</span></h2>
+            <p class="lead reveal" data-bind-html="global.footer.lead">
+              Guanzi Media helps brands tell powerful stories<br />
+              and earn lasting cultural resonance.
+            </p>
+          </div>
+          <div class="footer-right" data-list="global.footer.offices"></div>
+        </div>
+        <div class="footer-bottom">
+          <div class="brand reveal">
+            <h3 data-bind="global.footer.brand">GUANZI.</h3>
+            <p data-bind="global.footer.copyright">© 2016 – 2026 北京光子文化传媒有限公司</p>
+          </div>
+          <ul class="social reveal">
+            <li><a href="#" aria-label="Instagram">IG</a></li>
+            <li><a href="#" aria-label="Behance">Be</a></li>
+            <li><a href="#" aria-label="Twitter">X</a></li>
+            <li><a href="#" aria-label="Facebook">Fb</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        <a href="https://beian.miit.gov.cn" target="_blank" rel="noopener" data-bind="global.footer.beian">京ICP备XXXXXXXX号</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

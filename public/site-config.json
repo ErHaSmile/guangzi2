@@ -1,0 +1,1701 @@
+{
+  "global": {
+    "brandName": "GUANGZI",
+    "brandSub": "光子文化",
+    "nav": {
+      "service": "核心服务",
+      "case": "成功案例",
+      "about": "关于我们",
+      "news": "数据看板",
+      "contact": "合作咨询"
+    },
+    "footer": {
+      "title": "LET'S GROW TOGETHER",
+      "lead": "达人BD × 自有主播双轮驱动，\n为品牌提供全链路直播电商增长。",
+      "brand": "GUANGZI.",
+      "copyright": "© 2025 光子文化 GUANGZI MEDIA. All rights reserved.",
+      "beian": "",
+      "offices": [
+        {
+          "title": "杭州总部",
+          "lines": [
+            "杭州市余杭区未来科技城",
+            "梦想小镇创业大街28号楼"
+          ],
+          "email": "business@guangzi-media.com",
+          "tel": "400-888-6666"
+        }
+      ]
+    },
+    "tel": "010-8596-8820",
+    "menu": [
+      {
+        "title": "首页",
+        "en": "HOME",
+        "href": "/#home"
+      },
+      {
+        "title": "核心服务",
+        "en": "SERVICES",
+        "href": "/#services"
+      },
+      {
+        "title": "达人资源",
+        "en": "TALENTS",
+        "href": "/#talents"
+      },
+      {
+        "title": "直播案例",
+        "en": "LIVE",
+        "href": "/#live"
+      },
+      {
+        "title": "成功案例",
+        "en": "CASES",
+        "href": "/#cases"
+      },
+      {
+        "title": "数据看板",
+        "en": "DATA",
+        "href": "/#data"
+      },
+      {
+        "title": "关于我们",
+        "en": "ABOUT",
+        "href": "/#about"
+      },
+      {
+        "title": "合作咨询",
+        "en": "CONTACT",
+        "href": "/#contact"
+      }
+    ],
+    "companyName": "北京光子文化传媒有限公司"
+  },
+  "pages": {
+    "home": {
+      "seo": {
+        "title": "光子文化 · 达人BD × 自有主播 双轮驱动MCN",
+        "description": "光子文化深耕直播电商，以达人商务对接与自有主播孵化为核心双引擎，为品牌提供全链路MCN增长方案。"
+      },
+      "heroTitle": "双轮驱动",
+      "heroSubtitle": "达人BD × 自有主播 · 全链路MCN机构",
+      "video": "/site-media/videos/6bb83d0df194499a01a4bae3.mp4",
+      "specialtyTitle": "达人对接与主播孵化。<br />这是我们的双引擎。",
+      "whoLabel": "[ 关于我们 ]",
+      "clientRollA": [
+        "星河文旅",
+        "北城商业",
+        "启明科技",
+        "云岭茶业",
+        "华章教育",
+        "青禾餐饮",
+        "澜境地产",
+        "远山运动",
+        "锦书出版",
+        "光年汽车"
+      ],
+      "clientRollB": [
+        "锦书出版",
+        "青禾餐饮",
+        "远山运动",
+        "启明科技",
+        "云岭茶业",
+        "星河文旅",
+        "澜境地产",
+        "华章教育",
+        "北城商业",
+        "光年汽车"
+      ],
+      "introTitle": "多年来，我们以<a href=\"/case.html\">达人资源</a>与<a href=\"/case.html\">自有主播</a>双轮驱动，服务品牌直播增长",
+      "introText": "光子文化深耕直播电商领域，以达人商务对接与自有主播孵化为核心双引擎。\n\n从达人对接到专场策划、从主播孵化到货盘运营，我们提供可复用的增长链路。\n\n聊聊你的下一个直播项目…",
+      "clientLogos": [
+        "/site-media/images/0be5ed68aebd8fd2ef21c95a.jpg",
+        "/site-media/images/628230af0c9a4c74ca7d01e2.jpg",
+        "/site-media/images/55a109ec2328384c73639c8f.jpg",
+        "/site-media/images/9591557d914cd8a5598320d3.jpg",
+        "/site-media/images/a51ac00ecfef2e7ed4f68265.jpg",
+        "/site-media/images/b19f308286951fe58220f0fc.jpg",
+        "/site-media/images/fc29bf411a83992a4b229872.jpg",
+        "/site-media/images/02b1531a859c426441a31b57.jpg",
+        "/site-media/images/1fa142fc652c8ffdb58f3ef0.jpg",
+        "/site-media/images/0b892362e2b4c9dd3028d3d7.jpg"
+      ],
+      "whatEyebrow": "WHAT WE DO",
+      "whatTitle": "六大核心服务能力",
+      "whatDesc": "围绕达人BD与自有主播双轮驱动，覆盖商务对接、直播运营、内容种草与复盘增长。",
+      "whatCta": "探索更多",
+      "whatItems": [
+        {
+          "title": "达人商务对接",
+          "desc": "覆盖头部/腰部达人资源，精准匹配品类与档期，缩短品牌合作链路。",
+          "icon": "pencil"
+        },
+        {
+          "title": "自有主播孵化",
+          "desc": "选拔、培训、人设打造与账号运营，沉淀可复制的自有主播矩阵。",
+          "icon": "doc"
+        },
+        {
+          "title": "直播运营执行",
+          "desc": "从脚本、货盘到中控与复盘，保障专场转化与品牌安全。",
+          "icon": "hex"
+        },
+        {
+          "title": "内容种草投放",
+          "desc": "短视频与直播切片联动，放大达人声量与长尾转化。",
+          "icon": "list"
+        },
+        {
+          "title": "数字内容运营",
+          "desc": "短视频脚本、账号内容矩阵与传播节奏规划，让品牌在新媒体环境中持续发声。",
+          "icon": "image"
+        },
+        {
+          "title": "摄影与视觉设计",
+          "desc": "商业摄影、海报主视觉、包装与物料设计，以高质量视觉资产支撑全渠道传播。",
+          "icon": "cart"
+        },
+        {
+          "title": "动画与动态影像",
+          "desc": "MG 动画、产品三维演示与片头包装，让复杂信息更易理解、更具感染力。",
+          "icon": "check-doc"
+        }
+      ],
+      "casesTitle": "品牌合作案例",
+      "casesDesc": "服务美妆、服饰、食品、3C 等品类客户，沉淀长期合作复购",
+      "cases": [
+        {
+          "title": "星河文旅 / 品牌纪录片 / 文旅传播",
+          "image": "/site-media/images/2a30c70dc4efb8bd03599662.jpg",
+          "href": "./case-detail.html?id=%E6%98%9F%E6%B2%B3%E6%96%87%E6%97%85%E5%93%81%E7%89%8C%E5%8D%87%E7%BA%A7",
+          "caseId": "星河文旅品牌升级"
+        },
+        {
+          "title": "启明科技 / 产品发布会 / 活动影像",
+          "image": "/site-media/images/8e61149211ad4c28b89dc36e.jpg",
+          "href": "./case-detail.html?id=%E5%90%AF%E6%98%8E%E7%A7%91%E6%8A%80%E6%96%B0%E5%93%81%E5%8F%91%E5%B8%83%E4%BC%9A",
+          "caseId": "启明科技新品发布会"
+        },
+        {
+          "title": "云岭茶业 / 品牌广告片 / 消费品",
+          "image": "/site-media/images/b88ceb413af64804cddf7932.jpg",
+          "href": "./case-detail.html?id=%E4%BA%91%E5%B2%AD%E8%8C%B6%E4%B8%9A%E8%A7%86%E8%A7%89%E9%87%8D%E5%A1%91",
+          "caseId": "云岭茶业视觉重塑"
+        },
+        {
+          "title": "北城商业 / 开业盛典 / 现场执行",
+          "image": "/site-media/images/5a98cc631d96937745ef09ae.jpg",
+          "href": "./case-detail.html?id=%E5%8C%97%E5%9F%8E%E5%95%86%E4%B8%9A%E5%BC%80%E4%B8%9A%E7%9B%9B%E5%85%B8",
+          "caseId": "北城商业开业盛典"
+        },
+        {
+          "title": "华章教育 / 品牌形象片 / 机构传播",
+          "image": "/site-media/images/664c8af7213a81e23a37f3d4.jpg",
+          "href": "./case-detail.html?id=%E5%8D%8E%E7%AB%A0%E6%95%99%E8%82%B2%E5%93%81%E7%89%8C%E4%BD%93%E7%B3%BB",
+          "caseId": "华章教育品牌体系"
+        }
+      ],
+      "overseasTitle": "跨界传播",
+      "overseasDesc": "我们擅长将品牌故事转化为可被不同圈层理解的内容形态，在文化、商业与城市场景中建立有效连接，帮助客户扩大影响力。",
+      "overseasCta": "查看相关案例",
+      "overseas": [
+        {
+          "title": "城市文旅联名",
+          "desc": "Combining destination storytelling with brand campaigns to attract younger audiences.",
+          "image": "/site-media/images/71dc3624b5235c03549f2686.jpg",
+          "href": "/case.html"
+        },
+        {
+          "title": "消费品牌内容季",
+          "desc": "Seasonal content series for social platforms, retail screens and offline touchpoints.",
+          "image": "/site-media/images/cf555b0a44314a8d0e5e3c00.jpg",
+          "href": "/case.html"
+        },
+        {
+          "title": "科技发布影像",
+          "desc": "High-impact films and stage visuals for product launches and media briefings.",
+          "image": "/site-media/images/fa5b6ae63f6a3e9dcd366e51.jpg",
+          "href": "/case.html"
+        },
+        {
+          "title": "文化艺术展览",
+          "desc": "Curated exhibition experiences that connect art, commerce and public engagement.",
+          "image": "/site-media/images/9195a9a12745155ae1004c82.jpg",
+          "href": "/case.html"
+        }
+      ],
+      "mobileTitle": "新媒体内容开发",
+      "mobileDesc": "围绕短视频、直播切片与社交传播，我们为客户提供从选题策划、脚本创作到成片包装的一站式内容生产。",
+      "mobileLabel": "Content",
+      "mobileTags": [
+        {
+          "en": "Short Video",
+          "zh": "短视频策划制作"
+        },
+        {
+          "en": "Social Ops",
+          "zh": "账号内容运营"
+        },
+        {
+          "en": "Live Capsule",
+          "zh": "直播切片包装"
+        },
+        {
+          "en": "H5 Story",
+          "zh": "互动 H5 叙事"
+        }
+      ],
+      "mobileVideo": "/site-media/videos/752ad8645ee6a657560a32ea.mp4",
+      "mobileCaptionTitle": "内容为王，表达为先",
+      "mobileCaptionText": "我们关注平台语境与用户注意力，用专业制作能力帮助品牌在碎片化传播中保持品质与辨识度。",
+      "mobileCta": "需求提交",
+      "adTitle": "广告与影像拍摄",
+      "adDesc": "我们注重传达品牌的核心价值与文化气质，结合美学与制作工艺，输出有感染力的商业影像，让品牌形象深入人心。",
+      "adVideo": "/site-media/videos/9be4404a7885a81e96f024ea.mp4",
+      "adCaptionTitle": "Advertisement.",
+      "adCaptionText": "从前置策略到现场拍摄与后期调色，光子文化以完整制作链路呈现客户的品牌故事与商业价值。",
+      "adCta": "联系我们",
+      "newsTitleEn": "News",
+      "newsTitleZh": "新闻资讯",
+      "newsMore": "查看更多",
+      "newsCategories": [
+        "资讯公告",
+        "创意观点",
+        "行业观察",
+        "项目幕后",
+        "活动动态"
+      ],
+      "news": [
+        {
+          "title": "品牌如何用纪录片建立长期信任",
+          "image": "/site-media/images/51c0828f563cba0bd480330d.jpg",
+          "date": "2025.11.18",
+          "cat": "创意观点",
+          "href": "./news-detail.html?id=%E5%93%81%E7%89%8C%E5%A6%82%E4%BD%95%E7%94%A8%E7%BA%AA%E5%BD%95%E7%89%87%E5%BB%BA%E7%AB%8B%E9%95%BF%E6%9C%9F%E4%BF%A1%E4%BB%BB",
+          "newsId": "品牌如何用纪录片建立长期信任"
+        },
+        {
+          "title": "发布会影像的三要素：节奏、信息与情绪",
+          "image": "/site-media/images/857519336e3156a75ebf52f6.jpg",
+          "date": "2025.10.09",
+          "cat": "项目幕后",
+          "href": "./news-detail.html?id=%E5%8F%91%E5%B8%83%E4%BC%9A%E5%BD%B1%E5%83%8F%E7%9A%84%E4%B8%89%E8%A6%81%E7%B4%A0%E8%8A%82%E5%A5%8F%E4%BF%A1%E6%81%AF%E4%B8%8E%E6%83%85%E7%BB%AA",
+          "newsId": "发布会影像的三要素节奏信息与情绪"
+        },
+        {
+          "title": "线下展览如何转化为可持续的数字内容资产",
+          "image": "/site-media/images/9cad0539772a03b1d8dc4a27.jpg",
+          "date": "2025.09.22",
+          "cat": "行业观察",
+          "href": "./news-detail.html?id=%E7%BA%BF%E4%B8%8B%E5%B1%95%E8%A7%88%E5%A6%82%E4%BD%95%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%8F%AF%E6%8C%81%E7%BB%AD%E7%9A%84%E6%95%B0%E5%AD%97%E5%86%85%E5%AE%B9%E8%B5%84%E4%BA%A7",
+          "newsId": "线下展览如何转化为可持续的数字内容资产"
+        },
+        {
+          "title": "光子文化完成多项秋季品牌片交付",
+          "image": "/site-media/images/83a2f0365528d2db4fb04e9a.jpg",
+          "date": "2025.09.01",
+          "cat": "资讯公告",
+          "href": "./news-detail.html?id=%E5%85%89%E5%AD%90%E6%96%87%E5%8C%96%E5%AE%8C%E6%88%90%E5%A4%9A%E9%A1%B9%E7%A7%8B%E5%AD%A3%E5%93%81%E7%89%8C%E7%89%87%E4%BA%A4%E4%BB%98",
+          "newsId": "光子文化完成多项秋季品牌片交付"
+        }
+      ],
+      "blocks": {
+        "hero": true,
+        "services": true,
+        "talents": true,
+        "live": true,
+        "cases": true,
+        "data": true,
+        "process": true,
+        "about": true,
+        "contact": true
+      },
+      "whatAnimate": true,
+      "whatCollapse": false,
+      "clientRollSettings": {
+        "a": {
+          "scrolling": true,
+          "speed": 18
+        },
+        "b": {
+          "scrolling": true,
+          "speed": 18
+        }
+      },
+      "logoMark": "光",
+      "heroEyebrow": "GUANGZI CULTURE · MCN",
+      "heroTitleHtml": "达人BD × 自有主播<br/><span class=\"accent\">双轮驱动</span>的<br/>全链路MCN机构",
+      "heroDesc": "光子文化深耕直播电商领域，以达人商务对接与自有主播孵化为核心双引擎，为品牌提供从选品策划到直播落地的一站式增长解决方案。",
+      "heroImage": "/mcn/images/aadkue22lsccw_ve_miaoda-d571f2a1.png",
+      "heroFloatNum": "98%",
+      "heroFloatLabel": "客户复购率",
+      "servicesEyebrow": "CORE SERVICES",
+      "servicesTitle": "六大核心服务能力",
+      "servicesDesc": "从达人对接到直播落地，从内容种草到数据复盘，为品牌提供全链路的直播电商增长方案",
+      "talentsEyebrow": "TALENT RESOURCES",
+      "talentsTitle": "双轮驱动达人资源",
+      "talentsDesc": "外部达人BD与自有主播矩阵并行，覆盖多品类、多层级直播带货能力",
+      "liveEyebrow": "LIVE CASES",
+      "liveTitle": "直播战绩案例",
+      "liveDesc": "精选高转化专场与爆款节点，展示可复制的增长打法",
+      "casesEyebrow": "SUCCESS STORIES",
+      "dataEyebrow": "DATA DASHBOARD",
+      "dataTitle": "销售数据看板",
+      "dataDesc": "用可视化数据呈现 GMV、品类结构与增长趋势",
+      "processEyebrow": "PROCESS",
+      "processTitle": "标准化服务流程",
+      "processDesc": "从需求诊断到复盘优化，全链路可追踪、可复用",
+      "aboutEyebrow": "ABOUT US",
+      "aboutTitle": "关于光子文化",
+      "aboutText": "光子文化成立于2019年，总部位于杭州，是国内领先的以\"达人BD + 自有主播\"双轮驱动的MCN机构。",
+      "testimonialText": "与光子文化合作两年，从达人对接到自有主播专场，他们的专业度和执行力让我们非常满意。今年618大促，他们帮我们实现了GMV同比增长180%的好成绩，是值得长期信赖的合作伙伴。",
+      "testimonialName": "王梦琪",
+      "testimonialRole": "某国货美妆品牌 · 电商总监",
+      "contactEyebrow": "CONTACT US",
+      "contactTitleHtml": "让我们一起<br/>打造下一个爆款",
+      "contactDesc": "无论您是想试水直播电商的新锐品牌，还是寻求增长突破的成熟品牌，光子文化都能为您量身定制最适合的达人对接与直播运营方案。",
+      "contactTel": "400-888-6666",
+      "contactEmail": "business@guangzi-media.com",
+      "contactAddress": "杭州市余杭区未来科技城梦想小镇创业大街28号楼",
+      "contactSuccessText": "感谢您的咨询，我们的商务团队将在24小时内与您联系！",
+      "blockOrder": [
+        "hero",
+        "services",
+        "talents",
+        "live",
+        "cases",
+        "data",
+        "process",
+        "about",
+        "contact"
+      ],
+      "talentCategories": [
+        "自有签约主播",
+        "外部合作达人"
+      ],
+      "talentDefaultCategory": "自有签约主播",
+      "talentItems": [
+        {
+          "id": "xiaoyu",
+          "name": "小雨同学",
+          "cat": "自有签约主播",
+          "badge": "自有主播",
+          "track": "owned",
+          "platform": "抖音 · 美妆垂类 / 580万粉",
+          "avatar": "/mcn/images/aadkue22lsccw_ve_miaoda-d571f2a1.png",
+          "metrics": [
+            {
+              "value": "580万",
+              "label": "粉丝数"
+            },
+            {
+              "value": "15.2%",
+              "label": "转化率"
+            },
+            {
+              "value": "860万",
+              "label": "场均GMV"
+            }
+          ],
+          "metricsLines": [
+            "580万|粉丝数",
+            "15.2%|转化率",
+            "860万|场均GMV"
+          ],
+          "summary": "美妆垂类头部自有主播，擅长成分科普与场景种草，场均转化稳定，适合新品首发与大促节点。",
+          "body": "深耕美妆护肤赛道多年，短视频种草覆盖成分测评、早晚护肤流程与妆容示范；直播端以「讲解—试用—限时权益」节奏推动成交。可承接精华、面霜、彩妆套组等高客单品类，支持品牌专场与矩阵联播。",
+          "gallery": [
+            "/mcn/images/aadkue22lsccw_ve_miaoda-d571f2a1.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "lily",
+          "name": "穿搭女王Lily",
+          "cat": "自有签约主播",
+          "badge": "自有主播",
+          "track": "owned",
+          "platform": "抖音 · 服饰垂类 / 420万粉",
+          "avatar": "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+          "metrics": [
+            {
+              "value": "420万",
+              "label": "粉丝数"
+            },
+            {
+              "value": "11.8%",
+              "label": "转化率"
+            },
+            {
+              "value": "620万",
+              "label": "场均GMV"
+            }
+          ],
+          "metricsLines": [
+            "420万|粉丝数",
+            "11.8%|转化率",
+            "620万|场均GMV"
+          ],
+          "summary": "服饰穿搭垂类自有主播，以 lookbook 与场景演绎带动连带购买，联名首发表现突出。",
+          "body": "擅长将季节主题、设计师联名与通勤/度假场景包装成可传播穿搭提案。短视频侧重多 look 混搭，直播侧重试穿对比与尺码建议，适合女装、配饰、鞋包等品类的矩阵投放与首发专场。",
+          "gallery": [
+            "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png"
+          ]
+        },
+        {
+          "id": "tech-max",
+          "name": "科技玩家Max",
+          "cat": "自有签约主播",
+          "badge": "自有主播",
+          "track": "owned",
+          "platform": "抖音 · 3C数码 / 360万粉",
+          "avatar": "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png",
+          "metrics": [
+            {
+              "value": "360万",
+              "label": "粉丝数"
+            },
+            {
+              "value": "12.3%",
+              "label": "转化率"
+            },
+            {
+              "value": "1180万",
+              "label": "场均GMV"
+            }
+          ],
+          "metricsLines": [
+            "360万|粉丝数",
+            "12.3%|转化率",
+            "1180万|场均GMV"
+          ],
+          "summary": "3C 数码垂类自有主播，开箱测评与参数对比专业度高，擅长推动高客单转化。",
+          "body": "内容覆盖旗舰手机、智能穿戴与数码配件。预热期输出对比测评与场景演示，直播期配合品牌专属券包与以旧换新权益，适合新品发布会专场与大促节点的高客单成交。",
+          "gallery": [
+            "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png"
+          ]
+        },
+        {
+          "id": "home-life",
+          "name": "家居生活家",
+          "cat": "外部合作达人",
+          "badge": "合作达人",
+          "track": "bd",
+          "platform": "小红书 · 家居垂类 / 280万粉",
+          "avatar": "/mcn/images/aadkue5df3ycs_ve_miaoda-376b9d21.png",
+          "metrics": [
+            {
+              "value": "280万",
+              "label": "粉丝数"
+            },
+            {
+              "value": "9.6%",
+              "label": "转化率"
+            },
+            {
+              "value": "380万",
+              "label": "场均GMV"
+            }
+          ],
+          "metricsLines": [
+            "280万|粉丝数",
+            "9.6%|转化率",
+            "380万|场均GMV"
+          ],
+          "summary": "家居生活垂类外部达人，场景化陈列与种草笔记转化能力突出，适合长效内容投放。",
+          "body": "以真实居住场景为主，擅长收纳改造、软装搭配与日用好物清单。小红书笔记种草后可衔接淘宝/抖音直播转化，适合家居、日用、收纳、香氛等品类的持续合作。",
+          "gallery": [
+            "/mcn/images/aadkue5df3ycs_ve_miaoda-376b9d21.png",
+            "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "foodie",
+          "name": "吃货小当家",
+          "cat": "外部合作达人",
+          "badge": "合作达人",
+          "track": "bd",
+          "platform": "快手 · 美食垂类 / 650万粉",
+          "avatar": "/mcn/images/aadkue2qormhw_ve_miaoda-be7d9ea4.png",
+          "metrics": [
+            {
+              "value": "650万",
+              "label": "粉丝数"
+            },
+            {
+              "value": "18.5%",
+              "label": "转化率"
+            },
+            {
+              "value": "980万",
+              "label": "场均GMV"
+            }
+          ],
+          "metricsLines": [
+            "650万|粉丝数",
+            "18.5%|转化率",
+            "980万|场均GMV"
+          ],
+          "summary": "美食垂类高互动达人，试吃玩法与限时福利拉升转化显著，大场爆发力强。",
+          "body": "擅长快节奏互动、组合满减与主题节庆包装。可承接零食、速食、饮料、地方特产等品类，适合品牌盛典夜、零食节与平台大促的集中爆发。",
+          "gallery": [
+            "/mcn/images/aadkue2qormhw_ve_miaoda-be7d9ea4.png",
+            "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png"
+          ]
+        },
+        {
+          "id": "style-nova",
+          "name": "潮流主理人Nova",
+          "cat": "外部合作达人",
+          "badge": "合作达人",
+          "track": "bd",
+          "platform": "小红书 · 潮流生活方式 / 210万粉",
+          "avatar": "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png",
+          "metrics": [
+            {
+              "value": "210万",
+              "label": "粉丝数"
+            },
+            {
+              "value": "10.4%",
+              "label": "转化率"
+            },
+            {
+              "value": "290万",
+              "label": "场均GMV"
+            }
+          ],
+          "metricsLines": [
+            "210万|粉丝数",
+            "10.4%|转化率",
+            "290万|场均GMV"
+          ],
+          "summary": "潮流生活方式外部达人，内容审美在线，适合新锐品牌心智建设与种草转化。",
+          "body": "覆盖街头潮流、轻奢配饰与生活方式单品。笔记侧重氛围感与穿搭故事，直播侧重限定色与联名款解读，适合新锐品牌冷启动与年轻人群触达。",
+          "gallery": [
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png",
+            "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png"
+          ]
+        }
+      ],
+      "liveItems": [
+        {
+          "id": "live-beauty-618",
+          "title": "618美妆超级品牌日专场",
+          "category": "美妆护肤",
+          "talent": "主播：小雨同学 · 抖音平台",
+          "cover": "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+          "viewers": "128.6万人观看",
+          "metrics": [
+            {
+              "value": "1280万",
+              "label": "GMV"
+            },
+            {
+              "value": "15.2%",
+              "label": "转化率"
+            },
+            {
+              "value": "8.2万",
+              "label": "订单数"
+            }
+          ],
+          "summary": "美妆垂类自有主播专场，预热短视频 + 直播转化组合，单场 GMV 破千万。",
+          "body": "本场聚焦国货精华与彩妆套组，通过达人实测、限时赠品与场控节奏设计，完成从种草到成交的完整链路。",
+          "gallery": [
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+            "/mcn/images/aadkue22lsccw_ve_miaoda-d571f2a1.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "live-phone",
+          "title": "旗舰手机新品发布会专场",
+          "category": "3C数码",
+          "talent": "主播：科技玩家Max · 抖音平台",
+          "cover": "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png",
+          "viewers": "86.2万人观看",
+          "metrics": [
+            {
+              "value": "2150万",
+              "label": "GMV"
+            },
+            {
+              "value": "12.3%",
+              "label": "转化率"
+            },
+            {
+              "value": "3.6万",
+              "label": "订单数"
+            }
+          ],
+          "summary": "新品手机发布会直播，专业测评 + 限时权益，推动高客单转化。",
+          "body": "联合科技垂类达人完成开箱、对比测评与场景演示，配合品牌专属券包提升下单意愿。",
+          "gallery": [
+            "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png"
+          ]
+        },
+        {
+          "id": "live-snack",
+          "title": "零食狂欢夜 · 年度品牌盛典",
+          "category": "美食食品",
+          "talent": "主播：吃货小当家 · 快手平台",
+          "cover": "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+          "viewers": "215.8万人观看",
+          "metrics": [
+            {
+              "value": "960万",
+              "label": "GMV"
+            },
+            {
+              "value": "22.5%",
+              "label": "转化率"
+            },
+            {
+              "value": "15.8万",
+              "label": "订单数"
+            }
+          ],
+          "summary": "零食节主题专场，高互动玩法拉升转化。",
+          "body": "以「零食狂欢夜」为主题，结合试吃互动与满减组合，实现品效双收。",
+          "gallery": [
+            "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+            "/mcn/images/aadkue2qormhw_ve_miaoda-be7d9ea4.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png"
+          ]
+        },
+        {
+          "id": "live-fashion",
+          "title": "设计师联名款服饰首发",
+          "category": "服饰穿搭",
+          "talent": "主播：穿搭女王Lily · 小红书",
+          "cover": "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+          "viewers": "92.4万人观看",
+          "metrics": [
+            {
+              "value": "650万",
+              "label": "GMV"
+            },
+            {
+              "value": "11.8%",
+              "label": "转化率"
+            },
+            {
+              "value": "2.1万",
+              "label": "订单数"
+            }
+          ],
+          "summary": "联名服饰首发直播，穿搭场景种草带动转化。",
+          "body": "围绕联名故事与穿搭提案组织多 look 演示，突出稀缺与首发权益。",
+          "gallery": [
+            "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "live-618-night",
+          "title": "618巅峰夜 · 全品类狂欢",
+          "category": "全品类",
+          "talent": "多位自有主播联合 · 抖音",
+          "cover": "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png",
+          "viewers": "156.3万人观看",
+          "metrics": [
+            {
+              "value": "3680万",
+              "label": "GMV"
+            },
+            {
+              "value": "16.8%",
+              "label": "转化率"
+            },
+            {
+              "value": "28.5万",
+              "label": "订单数"
+            }
+          ],
+          "summary": "多主播接力大场，全品类爆发式成交。",
+          "body": "采用分段主播接力与品类专场轮换，配合平台大促流量完成峰值成交。",
+          "gallery": [
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+            "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png"
+          ]
+        },
+        {
+          "id": "live-home",
+          "title": "家居好物品牌超级品牌日",
+          "category": "家居生活",
+          "talent": "主播：家居生活家 · 淘宝直播",
+          "cover": "/mcn/images/aadkue5df3ycs_ve_miaoda-376b9d21.png",
+          "viewers": "68.9万人观看",
+          "metrics": [
+            {
+              "value": "520万",
+              "label": "GMV"
+            },
+            {
+              "value": "9.6%",
+              "label": "转化率"
+            },
+            {
+              "value": "3.2万",
+              "label": "订单数"
+            }
+          ],
+          "summary": "家居好物超级品牌日，场景化带货。",
+          "body": "以生活场景陈列与套组推荐为主，提升连带购买。",
+          "gallery": [
+            "/mcn/images/aadkue5df3ycs_ve_miaoda-376b9d21.png",
+            "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        }
+      ],
+      "caseItems": [
+        {
+          "id": "case-serum",
+          "title": "新品精华液首发直播战役",
+          "brand": "某国货美妆品牌",
+          "cover": "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+          "summary": "联合5位头部美妆达人+3位自有主播打造新品首发矩阵，通过预热短视频+直播带货组合拳，实现新品上线首月销售额破千万。",
+          "metrics": [
+            {
+              "value": "1280万",
+              "label": "总GMV"
+            },
+            {
+              "value": "18.6%",
+              "label": "转化率"
+            },
+            {
+              "value": "320万",
+              "label": "曝光量"
+            }
+          ],
+          "body": "围绕新品功效卖点拆解内容矩阵，预热期以测评与成分科普铺量，直播期以达人矩阵 + 自有主播承接转化，形成完整增长闭环。",
+          "gallery": [
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+            "/mcn/images/aadkue22lsccw_ve_miaoda-d571f2a1.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "case-watch",
+          "title": "智能手表618大促合作",
+          "brand": "某知名数码品牌",
+          "cover": "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png",
+          "summary": "策划618数码品类专场直播，邀请8位科技垂类达人组成带货天团，通过专业测评+限时优惠的组合策略，单场GMV再创新高。",
+          "metrics": [
+            {
+              "value": "2150万",
+              "label": "总GMV"
+            },
+            {
+              "value": "12.3%",
+              "label": "转化率"
+            },
+            {
+              "value": "580万",
+              "label": "观看人数"
+            }
+          ],
+          "body": "大促节点强化对比测评与权益节奏，形成「认知—种草—成交」三段式内容推进。",
+          "gallery": [
+            "/mcn/images/aadkue4zmf2jw_ve_miaoda-5a2f1980.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "case-snack",
+          "title": "年度零食节品牌专场",
+          "brand": "某零食头部品牌",
+          "cover": "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+          "summary": "定制年度零食节直播方案，打造\"零食狂欢夜\"主题专场，结合达人个人IP与品牌调性，实现品牌声量与销量双增长。",
+          "metrics": [
+            {
+              "value": "860万",
+              "label": "总GMV"
+            },
+            {
+              "value": "22.5%",
+              "label": "转化率"
+            },
+            {
+              "value": "410万",
+              "label": "观看人数"
+            }
+          ],
+          "body": "主题化包装提升记忆点，互动玩法拉动停留与转化。",
+          "gallery": [
+            "/mcn/images/aadkue5f7tyqu_ve_miaoda-f3e238f8.png",
+            "/mcn/images/aadkue2qormhw_ve_miaoda-be7d9ea4.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png"
+          ]
+        },
+        {
+          "id": "case-autumn",
+          "title": "秋冬新品穿搭种草计划",
+          "brand": "某快时尚服饰品牌",
+          "cover": "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+          "summary": "联合15位穿搭达人打造\"秋冬穿搭图鉴\"内容矩阵，通过短视频种草+直播转化的组合玩法，实现秋冬系列上线即售罄。",
+          "metrics": [
+            {
+              "value": "1680万",
+              "label": "总GMV"
+            },
+            {
+              "value": "14.2%",
+              "label": "转化率"
+            },
+            {
+              "value": "720万",
+              "label": "曝光量"
+            }
+          ],
+          "body": "短视频图鉴铺量后，直播承接高意向用户，缩短决策链路。",
+          "gallery": [
+            "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png",
+            "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png"
+          ]
+        },
+        {
+          "id": "case-1111",
+          "title": "双十一大促全案服务",
+          "brand": "某国民服饰品牌",
+          "cover": "/mcn/images/aadkue5df3ycs_ve_miaoda-376b9d21.png",
+          "summary": "承接双十一全案直播运营，从达人筛选到直播执行全链路跟进，30天内组织28场直播，总GMV突破3000万。",
+          "metrics": [
+            {
+              "value": "3200万",
+              "label": "总GMV"
+            },
+            {
+              "value": "28场",
+              "label": "直播场次"
+            },
+            {
+              "value": "960万",
+              "label": "总观看"
+            }
+          ],
+          "body": "以排期密度与达人分层覆盖保证大促持续曝光与成交。",
+          "gallery": [
+            "/mcn/images/aadkue5df3ycs_ve_miaoda-376b9d21.png",
+            "/mcn/images/aadkue4zzsajw_ve_miaoda-6c4ae319.png",
+            "/mcn/images/aadkue474ywas_ve_miaoda-1dcb517e.png"
+          ]
+        },
+        {
+          "id": "case-lipstick",
+          "title": "彩妆新品达人种草计划",
+          "brand": "某新锐彩妆品牌",
+          "cover": "/mcn/images/aadkue2qormhw_ve_miaoda-be7d9ea4.png",
+          "summary": "为新品口红策划\"百人口红测评\"活动，联动100位美妆达人，多平台内容种草+集中直播转化，新品上市7天销量破百万支。",
+          "metrics": [
+            {
+              "value": "1850万",
+              "label": "总GMV"
+            },
+            {
+              "value": "20.1%",
+              "label": "转化率"
+            },
+            {
+              "value": "1200万",
+              "label": "总曝光"
+            }
+          ],
+          "body": "大规模达人测评制造话题，再以集中直播完成转化收口。",
+          "gallery": [
+            "/mcn/images/aadkue2qormhw_ve_miaoda-be7d9ea4.png",
+            "/mcn/images/aadkuew4ld4fw_ve_miaoda-e668bda3.png",
+            "/mcn/images/aadkue22lsccw_ve_miaoda-d571f2a1.png"
+          ]
+        }
+      ],
+      "serviceItems": [
+        {
+          "id": "bd",
+          "title": "达人商务对接",
+          "summary": "全平台各层级达人资源库，为品牌方精准匹配最优达人组合，提供从筛选沟通到落地执行的全链路BD服务。",
+          "icon": "users",
+          "advantages": [
+            "1200+ 外部达人资源",
+            "智能匹配算法推荐",
+            "全程商务谈判执行"
+          ]
+        },
+        {
+          "id": "owned",
+          "title": "自有主播矩阵",
+          "summary": "公司签约孵化86位自有主播，覆盖美妆、服饰、食品、3C、家居等核心品类，为品牌提供稳定可控的直播带货能力。",
+          "icon": "star",
+          "advantages": [
+            "86位 签约孵化主播",
+            "6大核心品类覆盖",
+            "稳定档期可预约"
+          ]
+        },
+        {
+          "id": "ops",
+          "title": "品牌直播代运营",
+          "summary": "从直播间搭建、脚本策划、主播输出到场控运营的一站式直播代运营服务，品牌方全程无忧。",
+          "icon": "monitor",
+          "advantages": [
+            "专业直播间搭建",
+            "资深运营团队驻场",
+            "全流程品控管理"
+          ]
+        },
+        {
+          "id": "video",
+          "title": "短视频内容种草",
+          "summary": "短视频策划、拍摄、剪辑、投放全流程服务，为品牌打造多平台种草内容矩阵，实现品效合一。",
+          "icon": "video",
+          "advantages": [
+            "专业内容策划团队",
+            "多平台内容分发",
+            "精准投放优化"
+          ]
+        },
+        {
+          "id": "supply",
+          "title": "选品与供应链",
+          "summary": "基于达人画像和直播数据的智能选品系统，对接优质供应链资源，为品牌和达人搭建高效的商品桥梁。",
+          "icon": "bag",
+          "advantages": [
+            "智能选品数据系统",
+            "优质供应链对接",
+            "品控质检保障"
+          ]
+        },
+        {
+          "id": "data",
+          "title": "数据复盘与优化",
+          "summary": "每场直播、每条视频的全维度数据复盘，深度分析转化漏斗，提供可落地的优化建议与增长策略。",
+          "icon": "chart",
+          "advantages": [
+            "多维度数据报表",
+            "转化漏斗分析",
+            "迭代优化建议"
+          ]
+        }
+      ],
+      "processSteps": [
+        {
+          "id": "p1",
+          "step": "01",
+          "title": "需求对接",
+          "desc": "深入了解品牌需求，明确合作目标与预期指标"
+        },
+        {
+          "id": "p2",
+          "step": "02",
+          "title": "方案策划",
+          "desc": "定制达人组合方案与内容策略，确定排期与预算"
+        },
+        {
+          "id": "p3",
+          "step": "03",
+          "title": "选品筹备",
+          "desc": "智能选品匹配，脚本策划与预热内容制作"
+        },
+        {
+          "id": "p4",
+          "step": "04",
+          "title": "直播执行",
+          "desc": "专业运营团队全程跟进，保障直播顺利进行"
+        },
+        {
+          "id": "p5",
+          "step": "05",
+          "title": "复盘优化",
+          "desc": "数据复盘报告输出，提供迭代优化建议"
+        }
+      ]
+    },
+    "service": {
+      "seo": {
+        "title": "服务项目-影视广告_活动展览_品牌策划_影视策划_广告制作_品牌传播-光子文化传媒 GUANZI",
+        "description": "北京光子文化传媒有限公司专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播"
+      },
+      "eyebrow": "Culture Media to Amplify Brands",
+      "title": "用内容与影像为品牌注入新动能",
+      "desc": "在注意力稀缺的时代，真正打动人的是故事与体验。\n光子文化把策略、创意与制作融为一体，\n帮助企业以更高品质的内容建立市场辨识度与文化影响力。",
+      "video": "/site-media/videos/752ad8645ee6a657560a32ea.mp4",
+      "videoVisible": true,
+      "designHeading": "Design",
+      "phases": [
+        {
+          "title": "洞察与策略",
+          "desc": "梳理品牌目标、受众与传播场景，明确核心信息与内容主线。"
+        },
+        {
+          "title": "创意概念",
+          "desc": "输出可执行的创意方向、视觉基调与叙事结构，对齐客户预期。"
+        },
+        {
+          "title": "制作筹备",
+          "desc": "完成脚本、分镜、选景、演员/场景统筹与拍摄计划。"
+        },
+        {
+          "title": "拍摄与执行",
+          "desc": "现场影像制作或活动落地，严格控制品质、节奏与安全。"
+        },
+        {
+          "title": "后期与传播",
+          "desc": "剪辑调色、包装成片，并按渠道适配物料，支持持续传播。"
+        }
+      ],
+      "services": [
+        {
+          "title": "影视策划制作",
+          "tags": [
+            "企业宣传片",
+            "品牌纪录片",
+            "产品演示片",
+            "短视频系列",
+            "活动纪实"
+          ]
+        },
+        {
+          "title": "广告创意制作",
+          "tags": [
+            "TVC 广告",
+            "信息流素材",
+            "海报主视觉",
+            "线下广告画面",
+            "节日战役物料"
+          ]
+        },
+        {
+          "title": "品牌形象策划",
+          "tags": [
+            "品牌定位",
+            "VI 视觉体系",
+            "传播语系",
+            "企业形象片",
+            "内容日历"
+          ]
+        },
+        {
+          "title": "活动展览执行",
+          "tags": [
+            "新品发布会",
+            "展览展示",
+            "文化艺术交流",
+            "开业盛典",
+            "会议服务"
+          ]
+        },
+        {
+          "title": "数字内容与动画",
+          "tags": [
+            "MG 动画",
+            "三维演示",
+            "片头包装",
+            "H5 互动",
+            "账号内容运营"
+          ]
+        }
+      ],
+      "marquees": [
+        {
+          "type": "text",
+          "text": "Film Production. Brand Content. Event Experience. Advertising Creative.",
+          "logos": [],
+          "direction": "left",
+          "style": "solid",
+          "scrolling": true,
+          "speed": 48
+        },
+        {
+          "type": "logo",
+          "text": "",
+          "logos": [
+            "/site-media/images/bb7c91b0f2279705b367bba5.png",
+            "/site-media/images/9f88e15c883de857c4578557.png",
+            "/site-media/images/1bf7a74613a0c2355f07d1d8.png",
+            "/site-media/images/140aeb4fc5dfd4d71a008b9d.png",
+            "/site-media/images/564c23ae4e89e7aefc0b0708.png",
+            "/site-media/images/1077e71a5954c8ea96a07c69.png",
+            "/site-media/images/9e164f3b7e8d8a35a375d20f.png",
+            "/site-media/images/ddf84fd9b06434075a79d64b.png",
+            "/site-media/images/d03899e7e8a4ef352b01f952.png",
+            "/site-media/images/e0296502d1697ef37305b464.png",
+            "/site-media/images/17bd5952606bdd2cbc630b85.png",
+            "/site-media/images/ba39d2ad4e469fa248c5ac55.png",
+            "/site-media/images/64e15660be27412656001326.png",
+            "/site-media/images/9f53582a1b48b0e3e24353ef.png",
+            "/site-media/images/00a4ef871514a3c1b5c31ead.png"
+          ],
+          "direction": "right",
+          "style": "hollow",
+          "scrolling": true,
+          "speed": 56
+        },
+        {
+          "type": "logo",
+          "text": "",
+          "logos": [
+            "/site-media/images/616caf9b0d69509eaeb0ac02.png",
+            "/site-media/images/af3dfeb4130dc5ecc09de56c.png",
+            "/site-media/images/25ad9e1a8a544594621bb4d0.png",
+            "/site-media/images/8aa39da521f15ef3166a3d12.png",
+            "/site-media/images/f4a3f48134434dc1ec9efcf1.png",
+            "/site-media/images/ca2dbe8985eaa39c48b22303.png",
+            "/site-media/images/f5d566a5134ba839f3073a26.png",
+            "/site-media/images/f93e42dbcb7d67818ffa8af1.png",
+            "/site-media/images/724e0613772d5d0d0c6a62d9.png",
+            "/site-media/images/6473550b29081305c21b66cb.png",
+            "/site-media/images/4149e693bf46eba1204bcbab.png",
+            "/site-media/images/ece4e9cebbdd285fda2ca0d9.png",
+            "/site-media/images/f5fd55adb316f6a4ed596e3a.png",
+            "/site-media/images/d28616c58cf4b74217e2992f.png",
+            "/site-media/images/2cda42d8e396c3d9d0a7ed96.png"
+          ],
+          "direction": "left",
+          "style": "solid",
+          "scrolling": true,
+          "speed": 40
+        }
+      ]
+    },
+    "about": {
+      "seo": {
+        "title": "关于我们-光子文化双轮驱动MCN",
+        "description": "光子文化成立于2019年，是以达人BD + 自有主播双轮驱动的MCN机构。"
+      },
+      "bannerTitle": "Hello Guanzi",
+      "bannerImage": "/site-media/images/f23a06c6cbd5b5ccd5d50400.jpg",
+      "bannerMeta": [
+        "Since 2016",
+        "Beijing",
+        "Culture Media"
+      ],
+      "stats": [
+        {
+          "count": 360,
+          "suffix": "+",
+          "desc": "已交付创意与影像项目"
+        },
+        {
+          "count": 10,
+          "suffix": "+",
+          "desc": "10+年传媒服务经验"
+        },
+        {
+          "count": 98,
+          "suffix": "%",
+          "desc": "客户续约与推荐率"
+        },
+        {
+          "count": 40,
+          "suffix": "+",
+          "desc": "覆盖行业与合作伙伴"
+        }
+      ],
+      "passages": [
+        {
+          "title": "关于光子",
+          "paragraphs": [
+            "北京光子文化传媒有限公司是一家位于北京的创意传媒机构，专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播。我们相信，好的内容不仅能被看见，更能够被长期记住。",
+            "团队覆盖策略、导演、摄影、后期、设计与活动执行等完整能力，既懂品牌叙事，也擅长在真实商业场景中高质量交付。"
+          ]
+        },
+        {
+          "title": "我们如何工作",
+          "paragraphs": [
+            "我们服务消费、科技、文旅、教育、商业地产等多个领域客户，提供从前期洞察到成片传播、从线下活动到数字内容的一体化方案。",
+            "光子文化坚持“策略可落地、创意可执行、制作有标准”，与客户共同把每一次传播做成可积累的品牌资产。"
+          ]
+        }
+      ],
+      "circles": [
+        {
+          "title": "影视\n制作",
+          "desc": "宣传片 / 广告片 / 纪录片"
+        },
+        {
+          "title": "品牌\n策划",
+          "desc": "形象体系与传播叙事"
+        },
+        {
+          "title": "活动\n展览",
+          "desc": "发布会与沉浸式现场"
+        },
+        {
+          "title": "数字\n内容",
+          "desc": "短视频与账号运营"
+        },
+        {
+          "title": "广告\n创意",
+          "desc": "全渠道传播物料"
+        }
+      ],
+      "reviewsTitle": "来自客户的评价",
+      "clientLogos": [
+        "/site-media/images/0be5ed68aebd8fd2ef21c95a.jpg",
+        "/site-media/images/628230af0c9a4c74ca7d01e2.jpg",
+        "/site-media/images/55a109ec2328384c73639c8f.jpg",
+        "/site-media/images/9591557d914cd8a5598320d3.jpg",
+        "/site-media/images/a51ac00ecfef2e7ed4f68265.jpg",
+        "/site-media/images/b19f308286951fe58220f0fc.jpg",
+        "/site-media/images/fc29bf411a83992a4b229872.jpg",
+        "/site-media/images/02b1531a859c426441a31b57.jpg",
+        "/site-media/images/1fa142fc652c8ffdb58f3ef0.jpg",
+        "/site-media/images/0b892362e2b4c9dd3028d3d7.jpg"
+      ],
+      "reviews": [
+        {
+          "text": "“光子文化对品牌理解很深，宣传片叙事完整、画面质感强，上线后内部与外部反馈都很好。”",
+          "cite": "— 星河文旅 品牌总监"
+        },
+        {
+          "text": "“从发布会现场到成片交付都很稳，沟通高效、执行专业，是我们愿意长期合作的传媒伙伴。”",
+          "cite": "— 启明科技 市场负责人"
+        }
+      ]
+    },
+    "news": {
+      "seo": {
+        "title": "新闻资讯-创意观点_项目幕后_影视策划_广告制作_品牌传播-光子文化传媒 GUANZI",
+        "description": "北京光子文化传媒有限公司专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播"
+      },
+      "titleEn": "News",
+      "titleZh": "新闻资讯",
+      "categories": [
+        "资讯公告",
+        "创意观点",
+        "行业观察",
+        "项目幕后",
+        "活动动态"
+      ],
+      "defaultCategory": "创意观点",
+      "pageSize": 6,
+      "items": [
+        {
+          "cat": "创意观点",
+          "title": "品牌如何用纪录片建立长期信任",
+          "image": "/site-media/images/51c0828f563cba0bd480330d.jpg",
+          "date": "2025.11.18",
+          "id": "品牌如何用纪录片建立长期信任",
+          "content": "纪录片正在成为品牌建立长期信任的重要方式。相比短平快的广告投放，纪录片更强调真实语境、人物关系与时间纵深，能让受众在更完整的叙事中理解品牌价值与社会角色。\n\n光子文化传媒在品牌纪录片项目中，通常从三方面入手：一是明确可被长期复用的核心议题；二是用现场与人物关系替代口号式表达；三是为后续传播预留章节化内容结构，使一条主片能够衍生出社交媒体短片、活动放映与内部培训素材。\n\n当品牌愿意用时间换取信任，纪录片便不再只是形象工程，而成为可持续的内容资产。",
+          "href": "./news-detail.html?id=%E5%93%81%E7%89%8C%E5%A6%82%E4%BD%95%E7%94%A8%E7%BA%AA%E5%BD%95%E7%89%87%E5%BB%BA%E7%AB%8B%E9%95%BF%E6%9C%9F%E4%BF%A1%E4%BB%BB"
+        },
+        {
+          "cat": "项目幕后",
+          "title": "发布会影像的三要素：节奏、信息与情绪",
+          "image": "/site-media/images/857519336e3156a75ebf52f6.jpg",
+          "date": "2025.10.09",
+          "id": "发布会影像的三要素节奏信息与情绪",
+          "content": "一场发布会的影像价值，往往不取决于机位数量，而取决于节奏、信息与情绪是否同步。\n\n节奏决定观众是否能跟上产品叙事；信息决定关键卖点是否被准确传达；情绪则决定品牌气质是否被记住。三者失衡时，素材再丰富也难形成清晰记忆点。\n\n我们建议在前期脚本阶段就把可传播镜头写进流程：开场气场、核心功能演示、现场反应与收尾口号，均需预留可剪辑的段落，方便会后快速产出官方片、信息流版本与媒体供稿。",
+          "href": "./news-detail.html?id=%E5%8F%91%E5%B8%83%E4%BC%9A%E5%BD%B1%E5%83%8F%E7%9A%84%E4%B8%89%E8%A6%81%E7%B4%A0%E8%8A%82%E5%A5%8F%E4%BF%A1%E6%81%AF%E4%B8%8E%E6%83%85%E7%BB%AA"
+        },
+        {
+          "cat": "行业观察",
+          "title": "线下展览如何转化为可持续的数字内容资产",
+          "image": "/site-media/images/9cad0539772a03b1d8dc4a27.jpg",
+          "date": "2025.09.22",
+          "id": "线下展览如何转化为可持续的数字内容资产",
+          "content": "线下展览的生命周期通常短暂，但内容资产可以更长。关键在于，展览策划阶段就要同步设计数字化采集与二次生产机制。\n\n从空间叙事、互动装置到观众行为，都可转化为短视频、图文专题与品牌官网专题页。光子文化传媒会在布展前确定影像脚本与素材清单，确保现场纪录不只是拍到了，而是能被用。\n\n当展览结束，留下的不应只有撤展照片，而应是一组可持续更新的数字内容矩阵。",
+          "href": "./news-detail.html?id=%E7%BA%BF%E4%B8%8B%E5%B1%95%E8%A7%88%E5%A6%82%E4%BD%95%E8%BD%AC%E5%8C%96%E4%B8%BA%E5%8F%AF%E6%8C%81%E7%BB%AD%E7%9A%84%E6%95%B0%E5%AD%97%E5%86%85%E5%AE%B9%E8%B5%84%E4%BA%A7"
+        },
+        {
+          "cat": "资讯公告",
+          "title": "光子文化完成多项秋季品牌片交付",
+          "image": "/site-media/images/83a2f0365528d2db4fb04e9a.jpg",
+          "date": "2025.09.01",
+          "id": "光子文化完成多项秋季品牌片交付",
+          "content": "近期，光子文化传媒完成多项秋季品牌片与活动影像交付，覆盖科技、教育、文旅与商业领域客户。\n\n项目类型包括品牌形象片、产品演示片、发布会纪实与短视频矩阵内容。团队在交付中持续优化前期策略、现场执行与后期节奏控制，帮助客户在关键营销节点获得更高传播效率。\n\n感谢合作伙伴的信任，我们将继续以高质量内容服务助力品牌成长。",
+          "href": "./news-detail.html?id=%E5%85%89%E5%AD%90%E6%96%87%E5%8C%96%E5%AE%8C%E6%88%90%E5%A4%9A%E9%A1%B9%E7%A7%8B%E5%AD%A3%E5%93%81%E7%89%8C%E7%89%87%E4%BA%A4%E4%BB%98"
+        },
+        {
+          "cat": "活动动态",
+          "title": "光子文化亮相北京品牌内容交流沙龙",
+          "image": "/site-media/images/51c0828f563cba0bd480330d.jpg",
+          "date": "2025.08.16",
+          "id": "光子文化亮相北京品牌内容交流沙龙",
+          "content": "光子文化传媒受邀参加北京品牌内容交流沙龙，围绕品牌叙事如何在多平台生长分享实践经验。\n\n活动现场，我们与品牌方、媒体及创作者就纪录片、短视频与线下活动的协同传播进行了讨论，并展示了近期部分案例的内容拆解方法。\n\n交流的核心结论是：好的品牌内容不是单次投放，而是可复用、可延展、可沉淀的系统能力。",
+          "href": "./news-detail.html?id=%E5%85%89%E5%AD%90%E6%96%87%E5%8C%96%E4%BA%AE%E7%9B%B8%E5%8C%97%E4%BA%AC%E5%93%81%E7%89%8C%E5%86%85%E5%AE%B9%E4%BA%A4%E6%B5%81%E6%B2%99%E9%BE%99"
+        },
+        {
+          "cat": "创意观点",
+          "title": "短视频时代，品牌片还需要“完整叙事”吗",
+          "image": "/site-media/images/857519336e3156a75ebf52f6.jpg",
+          "date": "2025.07.28",
+          "id": "短视频时代品牌片还需要完整叙事吗",
+          "content": "短视频改变了注意力结构，但并不意味着品牌片失去价值。相反，完整叙事更像品牌的源文件，短视频则是面向不同场景的切片。\n\n没有完整叙事，切片容易变得碎片且同质；没有短视频分发，完整叙事又难被看见。两者应被设计为同一内容体系的不同层级。\n\n光子文化建议客户先明确一条可长期讲述的品牌主线，再按平台特性拆解为 15 秒、60 秒与长片版本，形成稳定的内容生产节奏。",
+          "href": "./news-detail.html?id=%E7%9F%AD%E8%A7%86%E9%A2%91%E6%97%B6%E4%BB%A3%E5%93%81%E7%89%8C%E7%89%87%E8%BF%98%E9%9C%80%E8%A6%81%E5%AE%8C%E6%95%B4%E5%8F%99%E4%BA%8B%E5%90%97"
+        },
+        {
+          "cat": "项目幕后",
+          "title": "一场开业盛典的视觉统筹与现场节奏控制",
+          "image": "/site-media/images/9cad0539772a03b1d8dc4a27.jpg",
+          "date": "2025.06.12",
+          "id": "一场开业盛典的视觉统筹与现场节奏控制",
+          "content": "开业盛典的成功，不只看舞台是否炫目，更看视觉统筹与现场节奏是否服务于品牌目标。\n\n从主视觉、舞台动线、嘉宾流程到影像采集，需要统一时间轴。任何一个环节拖沓，都会削弱开业声量与到店转化。\n\n我们在执行中强调可传播优先：关键仪式必须具备清晰镜头语言，物料与屏幕内容要便于二次剪辑，确保活动当晚即可产出官方短片与媒体素材。",
+          "href": "./news-detail.html?id=%E4%B8%80%E5%9C%BA%E5%BC%80%E4%B8%9A%E7%9B%9B%E5%85%B8%E7%9A%84%E8%A7%86%E8%A7%89%E7%BB%9F%E7%AD%B9%E4%B8%8E%E7%8E%B0%E5%9C%BA%E8%8A%82%E5%A5%8F%E6%8E%A7%E5%88%B6"
+        },
+        {
+          "cat": "行业观察",
+          "title": "文旅传播中的在地文化如何被真实表达",
+          "image": "/site-media/images/83a2f0365528d2db4fb04e9a.jpg",
+          "date": "2025.05.20",
+          "id": "文旅传播中的在地文化如何被真实表达",
+          "content": "文旅传播最怕景观化与口号化。真正打动人的，往往是在地文化中那些具体的人、手艺、节日与日常。\n\n真实性并不等于粗糙，而是要求创作者愿意进入现场，建立与本地社群的信任，再用专业影像语言转译。\n\n光子文化在文旅项目中坚持先理解再表达：调研、采风、人物访谈先行，主视觉与影片后置，让传播内容经得起当地人的检验，也经得起远方观众的审美。",
+          "href": "./news-detail.html?id=%E6%96%87%E6%97%85%E4%BC%A0%E6%92%AD%E4%B8%AD%E7%9A%84%E5%9C%A8%E5%9C%B0%E6%96%87%E5%8C%96%E5%A6%82%E4%BD%95%E8%A2%AB%E7%9C%9F%E5%AE%9E%E8%A1%A8%E8%BE%BE"
+        },
+        {
+          "cat": "资讯公告",
+          "title": "北京光子文化传媒开启年度合作伙伴计划",
+          "image": "/site-media/images/51c0828f563cba0bd480330d.jpg",
+          "date": "2025.03.08",
+          "id": "北京光子文化传媒开启年度合作伙伴计划",
+          "content": "北京光子文化传媒正式开启年度合作伙伴计划，面向长期品牌客户提供更稳定的内容制作与传播支持。\n\n计划内容包括季度内容排期、影视制作资源预留、活动影像快速响应，以及跨项目的视觉规范统一服务。\n\n欢迎有持续内容需求的品牌与机构联系我们，共同规划下一年度的传播节奏。",
+          "href": "./news-detail.html?id=%E5%8C%97%E4%BA%AC%E5%85%89%E5%AD%90%E6%96%87%E5%8C%96%E4%BC%A0%E5%AA%92%E5%BC%80%E5%90%AF%E5%B9%B4%E5%BA%A6%E5%90%88%E4%BD%9C%E4%BC%99%E4%BC%B4%E8%AE%A1%E5%88%92"
+        }
+      ]
+    },
+    "case": {
+      "seo": {
+        "title": "创意案例-影视广告_活动展览_品牌策划_影视策划_广告制作_品牌传播-光子文化传媒 GUANZI",
+        "description": "北京光子文化传媒有限公司专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播"
+      },
+      "titleEn": "Case",
+      "titleZh": "案例集",
+      "categories": [
+        "品牌形象策划",
+        "影视广告制作",
+        "活动展览",
+        "数字内容",
+        "文化艺术交流"
+      ],
+      "defaultCategory": "品牌形象策划",
+      "items": [
+        {
+          "cat": "品牌形象策划",
+          "title": "星河文旅品牌升级",
+          "tags": "文旅 / 品牌叙事 / 形象片",
+          "image": "/site-media/images/4524cb75570146c76e02b4eb.jpg",
+          "id": "星河文旅品牌升级",
+          "summary": "围绕文旅目的地气质，完成品牌叙事升级与形象片制作，统一视觉语言与传播语系，帮助品牌在城市与年轻客群中建立清晰记忆点。",
+          "banner": "/site-media/images/4524cb75570146c76e02b4eb.jpg",
+          "gallery": [
+            "/site-media/images/4524cb75570146c76e02b4eb.jpg"
+          ],
+          "href": "./case-detail.html?id=%E6%98%9F%E6%B2%B3%E6%96%87%E6%97%85%E5%93%81%E7%89%8C%E5%8D%87%E7%BA%A7"
+        },
+        {
+          "cat": "品牌形象策划",
+          "title": "华章教育品牌体系",
+          "tags": "教育 / VI / 传播语系",
+          "image": "/site-media/images/ebea8e50d2a1b5f1478f86df.jpg",
+          "id": "华章教育品牌体系",
+          "summary": "为教育机构梳理品牌定位与视觉体系，覆盖 VI、传播语与招生内容框架，让品牌在招生季与日常运营中保持一致表达。",
+          "banner": "/site-media/images/ebea8e50d2a1b5f1478f86df.jpg",
+          "gallery": [
+            "/site-media/images/ebea8e50d2a1b5f1478f86df.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%8D%8E%E7%AB%A0%E6%95%99%E8%82%B2%E5%93%81%E7%89%8C%E4%BD%93%E7%B3%BB"
+        },
+        {
+          "cat": "品牌形象策划",
+          "title": "云岭茶业视觉重塑",
+          "tags": "消费品 / 包装视觉 / 主视觉",
+          "image": "/site-media/images/1cf747e029ac6d07f6f649b8.jpg",
+          "id": "云岭茶业视觉重塑",
+          "summary": "以产地与工艺为线索重塑茶业品牌主视觉与包装视觉语言，兼顾线下货架识别与线上内容传播效率。",
+          "banner": "/site-media/images/1cf747e029ac6d07f6f649b8.jpg",
+          "gallery": [
+            "/site-media/images/1cf747e029ac6d07f6f649b8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E4%BA%91%E5%B2%AD%E8%8C%B6%E4%B8%9A%E8%A7%86%E8%A7%89%E9%87%8D%E5%A1%91"
+        },
+        {
+          "cat": "品牌形象策划",
+          "title": "澜境地产品牌手册",
+          "tags": "地产 / 品牌手册 / 空间视觉",
+          "image": "/site-media/images/029c0766826306d0a44fe0b8.jpg",
+          "id": "澜境地产品牌手册",
+          "summary": "输出地产品牌手册与空间视觉规范，统一售楼处、物料与数字触点的品牌呈现。",
+          "banner": "/site-media/images/029c0766826306d0a44fe0b8.jpg",
+          "gallery": [
+            "/site-media/images/029c0766826306d0a44fe0b8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E6%BE%9C%E5%A2%83%E5%9C%B0%E4%BA%A7%E5%93%81%E7%89%8C%E6%89%8B%E5%86%8C"
+        },
+        {
+          "cat": "品牌形象策划",
+          "title": "青禾餐饮品牌故事",
+          "tags": "餐饮 / 内容策略 / 形象片",
+          "image": "/site-media/images/3cf2dc50c1a9ccd957618cf8.jpg",
+          "id": "青禾餐饮品牌故事",
+          "summary": "打造餐饮品牌故事线与形象片，连接门店体验与社交内容，强化品牌温度与复购意愿。",
+          "banner": "/site-media/images/3cf2dc50c1a9ccd957618cf8.jpg",
+          "gallery": [
+            "/site-media/images/3cf2dc50c1a9ccd957618cf8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E9%9D%92%E7%A6%BE%E9%A4%90%E9%A5%AE%E5%93%81%E7%89%8C%E6%95%85%E4%BA%8B"
+        },
+        {
+          "cat": "品牌形象策划",
+          "title": "远山运动品牌战役",
+          "tags": "运动 / 社交传播 / 视觉物料",
+          "image": "/site-media/images/182fad4131f2a0f3d4aa0f43.jpg",
+          "id": "远山运动品牌战役",
+          "summary": "以赛事与挑战内容驱动运动品牌传播，整合视觉物料与社交话题，提升品牌活跃度。",
+          "banner": "/site-media/images/182fad4131f2a0f3d4aa0f43.jpg",
+          "gallery": [
+            "/site-media/images/182fad4131f2a0f3d4aa0f43.jpg"
+          ],
+          "href": "./case-detail.html?id=%E8%BF%9C%E5%B1%B1%E8%BF%90%E5%8A%A8%E5%93%81%E7%89%8C%E6%88%98%E5%BD%B9"
+        },
+        {
+          "cat": "影视广告制作",
+          "title": "启明科技产品片",
+          "tags": "科技 / 产品演示 / 广告片",
+          "image": "/site-media/images/037184efcea3b2003437edb2.jpg",
+          "id": "启明科技产品片",
+          "summary": "制作科技产品演示与广告片，清晰呈现功能卖点与使用场景，服务官网、发布会与信息流投放。",
+          "banner": "/site-media/images/037184efcea3b2003437edb2.jpg",
+          "gallery": [
+            "/site-media/images/037184efcea3b2003437edb2.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%90%AF%E6%98%8E%E7%A7%91%E6%8A%80%E4%BA%A7%E5%93%81%E7%89%87"
+        },
+        {
+          "cat": "影视广告制作",
+          "title": "光年汽车品牌 TVC",
+          "tags": "汽车 / TVC / 调性片",
+          "image": "/site-media/images/a91a8a8a9b0a090532082616.jpg",
+          "id": "光年汽车品牌-tvc",
+          "summary": "完成汽车品牌 TVC 与调性片拍摄制作，塑造品牌气场并适配多渠道投放规格。",
+          "banner": "/site-media/images/a91a8a8a9b0a090532082616.jpg",
+          "gallery": [
+            "/site-media/images/a91a8a8a9b0a090532082616.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%85%89%E5%B9%B4%E6%B1%BD%E8%BD%A6%E5%93%81%E7%89%8C-tvc"
+        },
+        {
+          "cat": "影视广告制作",
+          "title": "北城商业开业广告",
+          "tags": "商业 / 广告物料 / 短视频",
+          "image": "/site-media/images/e1e53431753e1f21a15626af.jpg",
+          "id": "北城商业开业广告",
+          "summary": "配合商业体开业节奏输出广告物料与短视频内容，放大开业声量与到店转化。",
+          "banner": "/site-media/images/e1e53431753e1f21a15626af.jpg",
+          "gallery": [
+            "/site-media/images/e1e53431753e1f21a15626af.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%8C%97%E5%9F%8E%E5%95%86%E4%B8%9A%E5%BC%80%E4%B8%9A%E5%B9%BF%E5%91%8A"
+        },
+        {
+          "cat": "影视广告制作",
+          "title": "锦书出版纪录片",
+          "tags": "出版 / 纪录片 / 文化传播",
+          "image": "/site-media/images/3a3947c0d4f5f94aca42b588.jpg",
+          "id": "锦书出版纪录片",
+          "summary": "以纪录片手法记录出版与文化故事，兼顾艺术表达与公共传播价值。",
+          "banner": "/site-media/images/3a3947c0d4f5f94aca42b588.jpg",
+          "gallery": [
+            "/site-media/images/3a3947c0d4f5f94aca42b588.jpg"
+          ],
+          "href": "./case-detail.html?id=%E9%94%A6%E4%B9%A6%E5%87%BA%E7%89%88%E7%BA%AA%E5%BD%95%E7%89%87"
+        },
+        {
+          "cat": "影视广告制作",
+          "title": "云岭茶业春季广告",
+          "tags": "消费品 / 广告片 / 电商素材",
+          "image": "/site-media/images/d9a66149c055fe1764971c7e.jpg",
+          "id": "云岭茶业春季广告",
+          "summary": "围绕春季营销节点产出广告片与电商素材，统一品牌调性与销售转化目标。",
+          "banner": "/site-media/images/d9a66149c055fe1764971c7e.jpg",
+          "gallery": [
+            "/site-media/images/d9a66149c055fe1764971c7e.jpg"
+          ],
+          "href": "./case-detail.html?id=%E4%BA%91%E5%B2%AD%E8%8C%B6%E4%B8%9A%E6%98%A5%E5%AD%A3%E5%B9%BF%E5%91%8A"
+        },
+        {
+          "cat": "影视广告制作",
+          "title": "华章教育招生片",
+          "tags": "教育 / 宣传片 / 信息流",
+          "image": "/site-media/images/fb729471947e640cea7612b8.jpg",
+          "id": "华章教育招生片",
+          "summary": "制作招生宣传片与信息流版本，突出课程优势与学习成果，服务招生投放。",
+          "banner": "/site-media/images/fb729471947e640cea7612b8.jpg",
+          "gallery": [
+            "/site-media/images/fb729471947e640cea7612b8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%8D%8E%E7%AB%A0%E6%95%99%E8%82%B2%E6%8B%9B%E7%94%9F%E7%89%87"
+        },
+        {
+          "cat": "活动展览",
+          "title": "启明科技新品发布会",
+          "tags": "发布会 / 现场执行 / 纪实影像",
+          "image": "/site-media/images/4524cb75570146c76e02b4eb.jpg",
+          "id": "启明科技新品发布会",
+          "summary": "统筹新品发布会现场执行与纪实影像，覆盖舞台视觉、流程管理与媒体素材交付。",
+          "banner": "/site-media/images/4524cb75570146c76e02b4eb.jpg",
+          "gallery": [
+            "/site-media/images/4524cb75570146c76e02b4eb.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%90%AF%E6%98%8E%E7%A7%91%E6%8A%80%E6%96%B0%E5%93%81%E5%8F%91%E5%B8%83%E4%BC%9A"
+        },
+        {
+          "cat": "活动展览",
+          "title": "星河文旅城市展览",
+          "tags": "展览 / 沉浸体验 / 视觉设计",
+          "image": "/site-media/images/ebea8e50d2a1b5f1478f86df.jpg",
+          "id": "星河文旅城市展览",
+          "summary": "策划沉浸式城市展览体验，结合视觉设计与内容叙事，提升文旅品牌线下触达。",
+          "banner": "/site-media/images/ebea8e50d2a1b5f1478f86df.jpg",
+          "gallery": [
+            "/site-media/images/ebea8e50d2a1b5f1478f86df.jpg"
+          ],
+          "href": "./case-detail.html?id=%E6%98%9F%E6%B2%B3%E6%96%87%E6%97%85%E5%9F%8E%E5%B8%82%E5%B1%95%E8%A7%88"
+        },
+        {
+          "cat": "活动展览",
+          "title": "北城商业开业盛典",
+          "tags": "开业 / 舞台视觉 / 活动统筹",
+          "image": "/site-media/images/1cf747e029ac6d07f6f649b8.jpg",
+          "id": "北城商业开业盛典",
+          "summary": "负责开业盛典舞台视觉与活动统筹，保障现场效果与内容纪实完整性。",
+          "banner": "/site-media/images/1cf747e029ac6d07f6f649b8.jpg",
+          "gallery": [
+            "/site-media/images/1cf747e029ac6d07f6f649b8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%8C%97%E5%9F%8E%E5%95%86%E4%B8%9A%E5%BC%80%E4%B8%9A%E7%9B%9B%E5%85%B8"
+        },
+        {
+          "cat": "数字内容",
+          "title": "青禾餐饮内容矩阵",
+          "tags": "短视频 / 账号运营 / 内容日历",
+          "image": "/site-media/images/029c0766826306d0a44fe0b8.jpg",
+          "id": "青禾餐饮内容矩阵",
+          "summary": "搭建短视频账号内容矩阵与内容日历，持续输出门店与产品相关内容。",
+          "banner": "/site-media/images/029c0766826306d0a44fe0b8.jpg",
+          "gallery": [
+            "/site-media/images/029c0766826306d0a44fe0b8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E9%9D%92%E7%A6%BE%E9%A4%90%E9%A5%AE%E5%86%85%E5%AE%B9%E7%9F%A9%E9%98%B5"
+        },
+        {
+          "cat": "数字内容",
+          "title": "远山运动挑战赛系列",
+          "tags": "短视频 / 赛事剪辑 / 社交传播",
+          "image": "/site-media/images/3cf2dc50c1a9ccd957618cf8.jpg",
+          "id": "远山运动挑战赛系列",
+          "summary": "制作赛事挑战系列短视频与剪辑包装，强化社交传播与用户参与。",
+          "banner": "/site-media/images/3cf2dc50c1a9ccd957618cf8.jpg",
+          "gallery": [
+            "/site-media/images/3cf2dc50c1a9ccd957618cf8.jpg"
+          ],
+          "href": "./case-detail.html?id=%E8%BF%9C%E5%B1%B1%E8%BF%90%E5%8A%A8%E6%8C%91%E6%88%98%E8%B5%9B%E7%B3%BB%E5%88%97"
+        },
+        {
+          "cat": "数字内容",
+          "title": "启明科技 H5 叙事",
+          "tags": "H5 / 互动内容 / 产品沟通",
+          "image": "/site-media/images/182fad4131f2a0f3d4aa0f43.jpg",
+          "id": "启明科技-h5-叙事",
+          "summary": "设计互动 H5 叙事体验，将产品沟通转化为可分享的数字化故事。",
+          "banner": "/site-media/images/182fad4131f2a0f3d4aa0f43.jpg",
+          "gallery": [
+            "/site-media/images/182fad4131f2a0f3d4aa0f43.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%90%AF%E6%98%8E%E7%A7%91%E6%8A%80-h5-%E5%8F%99%E4%BA%8B"
+        },
+        {
+          "cat": "文化艺术交流",
+          "title": "光影艺术交流周",
+          "tags": "文化交流 / 展览 / 活动影像",
+          "image": "/site-media/images/037184efcea3b2003437edb2.jpg",
+          "id": "光影艺术交流周",
+          "summary": "服务文化交流活动的展览呈现与活动影像记录，沉淀可传播的文化内容资产。",
+          "banner": "/site-media/images/037184efcea3b2003437edb2.jpg",
+          "gallery": [
+            "/site-media/images/037184efcea3b2003437edb2.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%85%89%E5%BD%B1%E8%89%BA%E6%9C%AF%E4%BA%A4%E6%B5%81%E5%91%A8"
+        },
+        {
+          "cat": "文化艺术交流",
+          "title": "城市青年创作者沙龙",
+          "tags": "沙龙 / 会议服务 / 内容纪实",
+          "image": "/site-media/images/a91a8a8a9b0a090532082616.jpg",
+          "id": "城市青年创作者沙龙",
+          "summary": "提供创作者沙龙会议服务与内容纪实，连接青年创作者与品牌方。",
+          "banner": "/site-media/images/a91a8a8a9b0a090532082616.jpg",
+          "gallery": [
+            "/site-media/images/a91a8a8a9b0a090532082616.jpg"
+          ],
+          "href": "./case-detail.html?id=%E5%9F%8E%E5%B8%82%E9%9D%92%E5%B9%B4%E5%88%9B%E4%BD%9C%E8%80%85%E6%B2%99%E9%BE%99"
+        },
+        {
+          "cat": "文化艺术交流",
+          "title": "非遗影像记录计划",
+          "tags": "文化 / 纪录片 / 公共传播",
+          "image": "/site-media/images/e1e53431753e1f21a15626af.jpg",
+          "id": "非遗影像记录计划",
+          "summary": "以纪录片方式记录非遗技艺与传承故事，服务公共传播与文化档案建设。",
+          "banner": "/site-media/images/e1e53431753e1f21a15626af.jpg",
+          "gallery": [
+            "/site-media/images/e1e53431753e1f21a15626af.jpg"
+          ],
+          "href": "./case-detail.html?id=%E9%9D%9E%E9%81%97%E5%BD%B1%E5%83%8F%E8%AE%B0%E5%BD%95%E8%AE%A1%E5%88%92"
+        }
+      ]
+    },
+    "contact": {
+      "seo": {
+        "title": "联系我们-北京总部_影视策划_广告制作_品牌传播-光子文化传媒 GUANZI",
+        "description": "北京光子文化传媒有限公司专注影视策划制作、广告创意、品牌形象策划、活动展览与数字内容传播"
+      },
+      "video": "/site-media/videos/9be4404a7885a81e96f024ea.mp4",
+      "videoLabel": "Connect",
+      "offices": [
+        {
+          "city": "北京",
+          "tel": "010-8596-8820",
+          "addr": "北京市朝阳区建国路88号 SOHO现代城 A座 1206",
+          "email": "hello@guanzi.cn",
+          "hours": "周一到周五（9:30 - 18:30）"
+        },
+        {
+          "city": "商务",
+          "tel": "010-8596-8820",
+          "addr": "影视制作 / 广告创意 / 活动展览 / 品牌内容合作",
+          "email": "biz@guanzi.cn",
+          "hours": "周一到周五（9:30 - 18:30）"
+        }
+      ],
+      "formEyebrow": "Contact us",
+      "formTitle": "聊聊您的项目:)",
+      "formDesc": "告诉我们您的传播目标与预算节奏，项目经理将尽快与您对接方案。",
+      "submitText": "提交需求",
+      "successText": "提交成功，我们会尽快与您联系",
+      "labels": {
+        "name": "姓名",
+        "tel": "电话",
+        "company": "公司",
+        "content": "需求描述"
+      }
+    }
+  }
+}

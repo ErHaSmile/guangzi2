@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>页面配置工作台</title>
+    <link rel="stylesheet" href="/src/admin/admin.css" />
+  </head>
+  <body class="admin-app">
+    <header class="admin-top">
+      <div class="admin-brand">
+        <strong>页面配置工作台</strong>
+        <span>「页面组件」维护组件库与菜单 · 各页面改内容 · 保存写入 MySQL</span>
+      </div>
+      <p class="admin-status" id="statusText">就绪</p>
+      <div class="admin-actions">
+        <button type="button" class="btn" id="btnReset">重新加载</button>
+        <button type="button" class="btn btn-primary" id="btnSave">保存到数据库</button>
+      </div>
+    </header>
+
+    <div class="admin-shell">
+      <aside class="admin-nav" id="pageNav" aria-label="页面导航"></aside>
+
+      <main class="admin-main">
+        <section class="admin-config-bar" aria-label="当前页配置">
+          <div class="config-bar-head">
+            <div class="config-bar-title">
+              <span class="config-bar-kicker">配置栏</span>
+              <strong id="sectionTitle">首页</strong>
+            </div>
+            <div class="config-cat-tabs" id="configCatTabs" hidden></div>
+          </div>
+          <div class="config-bar-scroll" id="configBar"></div>
+        </section>
+
+        <section class="admin-workspace" id="adminWorkspace" hidden aria-label="页面组件工作区"></section>
+
+        <section class="admin-preview" id="adminPreview">
+          <div class="preview-toolbar">
+            <span>预览窗口</span>
+            <span class="preview-page-label" id="previewPageLabel">index.html</span>
+            <button type="button" class="btn btn-sm" id="btnRefreshPreview">刷新</button>
+            <a class="btn btn-sm" id="openPreview" href="/" target="_blank" rel="noopener">新窗口打开</a>
+          </div>
+          <iframe id="previewFrame" title="页面预览"></iframe>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/src/admin/admin.js"></script>
+  </body>
+</html>
