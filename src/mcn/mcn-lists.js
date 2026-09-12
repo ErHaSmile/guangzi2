@@ -98,6 +98,211 @@ function metricsHtml(itemOrMetrics, cls = 'metric') {
     .join('')
 }
 
+/** —— Hero / 数据 / 关于 / 页脚 / 表单 默认种子 —— */
+export const DEFAULT_MCN_HERO_STATS = [
+  { num: '58', unit: '亿+', label: '累计GMV' },
+  { num: '1200', unit: '+', label: '外部合作达人' },
+  { num: '86', unit: '位', label: '自有签约主播' },
+  { num: '300', unit: '+', label: '服务品牌客户' },
+]
+
+export const DEFAULT_MCN_DATA_KPIS = [
+  { label: '年度总GMV', value: '58.2', unit: '亿元', trend: '↑ 42.6% YOY' },
+  { label: '本月GMV', value: '4.8', unit: '亿元', trend: '↑ 12.3% MOM' },
+  { label: '直播场次', value: '268', unit: '场', trend: '↑ 18.5% MOM' },
+  { label: '平均转化率', value: '13.6', unit: '%', trend: '↑ 2.1% MOM' },
+]
+
+export const DEFAULT_MCN_ABOUT_STATS = [
+  { num: '150', unit: '+', label: '专业团队成员' },
+  { num: '4', unit: '大', label: '主流平台合作' },
+  { num: '6', unit: '大', label: '核心服务能力' },
+]
+
+export const DEFAULT_MCN_FOOTER_COLUMNS = [
+  {
+    title: '核心服务',
+    linksLines: [
+      '达人商务对接|#services',
+      '自有主播矩阵|#talents',
+      '直播代运营|#live',
+      '短视频种草|#cases',
+      '选品供应链|#services',
+      '数据复盘优化|#data',
+    ],
+  },
+  {
+    title: '关于我们',
+    linksLines: [
+      '公司简介|#about',
+      '达人资源|#talents',
+      '成功案例|#cases',
+      '数据看板|#data',
+      '联系我们|#contact',
+    ],
+  },
+  {
+    title: '联系方式',
+    linksLines: [
+      '400-888-6666|#contact',
+      'business@guangzi-media.com|#contact',
+      '杭州市余杭区未来科技城|#contact',
+    ],
+  },
+]
+
+export const DEFAULT_MCN_FOOTER_KEYWORDS = ['达人对接', '直播带货', 'MCN机构', '品牌增长']
+
+export const DEFAULT_MCN_CATEGORY_OPTIONS = [
+  '美妆护肤',
+  '服饰穿搭',
+  '美食食品',
+  '3C数码',
+  '家居生活',
+  '母婴亲子',
+  '其他',
+]
+
+export const DEFAULT_MCN_SERVICE_OPTIONS = [
+  '达人商务对接',
+  '自有主播合作',
+  '直播代运营',
+  '短视频内容种草',
+  '选品与供应链',
+  '全案合作',
+]
+
+export const DEFAULT_MCN_DATA_CHARTS = {
+  trend: {
+    title: '月度销售趋势',
+    subtitle: '2025年1月 - 8月 GMV走势（单位：亿元）',
+    categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月'],
+    seriesCurrent: [3.2, 2.8, 4.1, 4.5, 5.2, 6.8, 5.6, 4.8],
+    seriesLast: [2.1, 1.9, 2.8, 3.0, 3.5, 4.6, 3.9, 3.3],
+    legendCurrent: 'GMV',
+    legendLast: '去年同期',
+  },
+  pie: {
+    title: '品类销售占比',
+    subtitle: '2025年累计各品类GMV占比',
+    itemsLines: ['美妆护肤|18.2', '服饰穿搭|14.5', '美食食品|10.8', '3C数码|8.6', '家居生活|6.1'],
+  },
+  bar: {
+    title: '各平台渠道GMV对比',
+    subtitle: '2025年1-8月各平台累计GMV（单位：亿元）',
+    categories: ['抖音', '快手', '淘宝直播', '小红书'],
+    gmv: [24.6, 15.2, 11.8, 6.6],
+    sessions: [980, 620, 450, 320],
+    legendGmv: 'GMV(亿元)',
+    legendSessions: '直播场次',
+  },
+  growth: {
+    title: '月度同比增长率',
+    subtitle: '2025年各月GMV同比增速',
+    categories: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月'],
+    rates: [52.4, 47.3, 46.2, 50.8, 48.6, 47.8, 43.5, 45.2],
+  },
+}
+
+export const DEFAULT_MCN_HOME_SCALARS = {
+  heroCtaPrimary: '立即对接',
+  heroCtaSecondary: '了解服务',
+  aboutImage: '/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png',
+  aboutFloatNum: '5年+',
+  aboutFloatLabel: '深耕直播电商',
+  aboutText:
+    '<p>光子文化成立于2019年，总部位于杭州，是国内领先的以"达人BD + 自有主播"双轮驱动的MCN机构。我们深耕直播电商领域五年，构建了覆盖抖音、快手、淘宝、小红书等全平台的达人资源网络，同时签约孵化了86位自有主播。</p><p>公司拥有专业的选品团队、内容策划团队、直播运营团队和数据分析团队，为品牌提供从达人筛选、内容策划、直播执行到数据复盘的全链路服务。凭借专业的服务能力和丰富的行业资源，我们已帮助众多国内外知名品牌实现直播电商渠道的突破性增长。</p>',
+  contactTelLabel: '商务合作热线',
+  contactEmailLabel: '商务邮箱',
+  contactAddressLabel: '公司地址',
+  contactFormTitle: '合作咨询',
+  contactSubmitText: '提交咨询',
+  contactNameLabel: '您的姓名 *',
+  contactPhoneLabel: '联系电话 *',
+  contactCompanyLabel: '公司名称',
+  contactCategoryLabel: '主营品类',
+  contactServiceLabel: '合作服务',
+  contactMsgLabel: '合作需求描述',
+  contactNamePlaceholder: '请输入您的姓名',
+  contactPhonePlaceholder: '请输入您的手机号',
+  contactCompanyPlaceholder: '请输入公司名称',
+  contactMsgPlaceholder: '请描述您的合作需求、预算范围等信息...',
+  contactCategoryPlaceholder: '请选择品类',
+  contactServicePlaceholder: '请选择服务类型',
+}
+
+const NAV_CTA_SVG =
+  '<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>'
+
+function parseLinkLines(lines) {
+  return linesOf(lines).map((line) => {
+    const idx = line.indexOf('|')
+    if (idx < 0) return { label: line, href: '#' }
+    return { label: line.slice(0, idx).trim(), href: line.slice(idx + 1).trim() || '#' }
+  })
+}
+
+function parseNumLines(lines) {
+  return linesOf(lines).map((x) => {
+    const n = Number(String(x).trim())
+    return Number.isFinite(n) ? n : 0
+  })
+}
+
+function toLinesArray(value) {
+  if (Array.isArray(value)) return value.map((x) => String(x ?? '').trim()).filter((x) => x !== '')
+  return linesOf(value)
+}
+
+function ensureDataCharts(home) {
+  if (!home.dataCharts || typeof home.dataCharts !== 'object') home.dataCharts = {}
+  const seed = DEFAULT_MCN_DATA_CHARTS
+  ;['trend', 'pie', 'bar', 'growth'].forEach((key) => {
+    if (!home.dataCharts[key] || typeof home.dataCharts[key] !== 'object') {
+      home.dataCharts[key] = JSON.parse(JSON.stringify(seed[key]))
+      return
+    }
+    const cur = home.dataCharts[key]
+    const def = seed[key]
+    Object.keys(def).forEach((k) => {
+      if (cur[k] == null || (Array.isArray(cur[k]) && !cur[k].length) || cur[k] === '') {
+        cur[k] = Array.isArray(def[k]) ? [...def[k]] : def[k]
+      }
+    })
+  })
+  // normalize admin lines ↔ arrays
+  const trend = home.dataCharts.trend
+  if (trend.categoriesLines) trend.categories = toLinesArray(trend.categoriesLines)
+  if (trend.seriesCurrentLines) trend.seriesCurrent = parseNumLines(trend.seriesCurrentLines)
+  if (trend.seriesLastLines) trend.seriesLast = parseNumLines(trend.seriesLastLines)
+  trend.categoriesLines = toLinesArray(trend.categories)
+  trend.seriesCurrentLines = (trend.seriesCurrent || []).map(String)
+  trend.seriesLastLines = (trend.seriesLast || []).map(String)
+
+  const pie = home.dataCharts.pie
+  if (!pie.itemsLines || !toLinesArray(pie.itemsLines).length) {
+    if (Array.isArray(pie.items) && pie.items.length) {
+      pie.itemsLines = pie.items.map((it) => `${it.name || ''}|${it.value ?? ''}`)
+    } else {
+      pie.itemsLines = [...seed.pie.itemsLines]
+    }
+  }
+
+  const bar = home.dataCharts.bar
+  if (bar.categoriesLines) bar.categories = toLinesArray(bar.categoriesLines)
+  if (bar.gmvLines) bar.gmv = parseNumLines(bar.gmvLines)
+  if (bar.sessionsLines) bar.sessions = parseNumLines(bar.sessionsLines)
+  bar.categoriesLines = toLinesArray(bar.categories)
+  bar.gmvLines = (bar.gmv || []).map(String)
+  bar.sessionsLines = (bar.sessions || []).map(String)
+
+  const growth = home.dataCharts.growth
+  if (growth.categoriesLines) growth.categories = toLinesArray(growth.categoriesLines)
+  if (growth.ratesLines) growth.rates = parseNumLines(growth.ratesLines)
+  growth.categoriesLines = toLinesArray(growth.categories)
+  growth.ratesLines = (growth.rates || []).map(String)
+}
+
 /** —— 默认种子（从参考页静态内容抽出） —— */
 export const DEFAULT_MCN_SERVICE_ITEMS = [
   {
@@ -564,6 +769,44 @@ export function ensureMcnHomeLists(config) {
     if (!Array.isArray(home[key]) || !home[key].length) home[key] = seed.map((x) => ({ ...x, ...(Array.isArray(x.gallery) ? { gallery: [...x.gallery] } : {}) }))
   }
   fillObjects('serviceItems', DEFAULT_MCN_SERVICE_ITEMS)
+  fillObjects('heroStats', DEFAULT_MCN_HERO_STATS)
+  fillObjects('dataKpis', DEFAULT_MCN_DATA_KPIS)
+  fillObjects('aboutStats', DEFAULT_MCN_ABOUT_STATS)
+  fillObjects('footerColumns', DEFAULT_MCN_FOOTER_COLUMNS)
+  if (Array.isArray(home.footerColumns)) {
+    home.footerColumns = home.footerColumns.map((c) => ({
+      title: c?.title || '',
+      linksLines: Array.isArray(c?.linksLines)
+        ? [...c.linksLines]
+        : Array.isArray(c?.links)
+          ? c.links.map((l) => `${l.label || ''}|${l.href || '#'}`)
+          : [],
+    }))
+  }
+  if (!Array.isArray(home.footerKeywords) || !home.footerKeywords.length) {
+    home.footerKeywords = [...DEFAULT_MCN_FOOTER_KEYWORDS]
+  }
+  if (!Array.isArray(home.contactCategoryOptions) || !home.contactCategoryOptions.length) {
+    home.contactCategoryOptions = [...DEFAULT_MCN_CATEGORY_OPTIONS]
+  }
+  if (!Array.isArray(home.contactServiceOptions) || !home.contactServiceOptions.length) {
+    home.contactServiceOptions = [...DEFAULT_MCN_SERVICE_OPTIONS]
+  }
+  Object.entries(DEFAULT_MCN_HOME_SCALARS).forEach(([key, val]) => {
+    if (home[key] == null || home[key] === '') home[key] = val
+  })
+  // longer about text if still short single-sentence default from old seed
+  if (
+    typeof home.aboutText === 'string' &&
+    home.aboutText.length < 120 &&
+    !/<p[\s>]/i.test(home.aboutText)
+  ) {
+    // keep short custom text; only fill when blank already handled
+  }
+  ensureDataCharts(home)
+  if (!home.testimonialAvatar && home.testimonialName) {
+    home.testimonialAvatar = String(home.testimonialName).trim().charAt(0) || '客'
+  }
   if (!Array.isArray(home.talentCategories) || !home.talentCategories.length) {
     home.talentCategories = [...DEFAULT_MCN_TALENT_CATEGORIES]
   } else {
@@ -857,6 +1100,107 @@ export function renderMcnProcessSteps(container, items) {
     .join('')
 }
 
+export function renderMcnHeroStats(container, items) {
+  if (!container) return
+  const list = Array.isArray(items) ? items : []
+  container.innerHTML = list
+    .map(
+      (it) => `<div class="hero-stat">
+        <div class="num">${escapeHtml(it.num || '')}<span class="unit">${escapeHtml(it.unit || '')}</span></div>
+        <div class="label">${escapeHtml(it.label || '')}</div>
+      </div>`
+    )
+    .join('')
+}
+
+export function renderMcnDataKpis(container, items) {
+  if (!container) return
+  const list = Array.isArray(items) ? items : []
+  container.innerHTML = list
+    .map(
+      (it) => `<div class="kpi-card">
+        <div class="kpi-label">${escapeHtml(it.label || '')}</div>
+        <div class="kpi-value">${escapeHtml(it.value || '')}<span class="kpi-unit">${escapeHtml(it.unit || '')}</span></div>
+        <span class="kpi-trend">${escapeHtml(it.trend || '')}</span>
+      </div>`
+    )
+    .join('')
+}
+
+export function renderMcnAboutStats(container, items) {
+  if (!container) return
+  const list = Array.isArray(items) ? items : []
+  container.innerHTML = list
+    .map(
+      (it) => `<div class="about-stat">
+        <div class="num">${escapeHtml(it.num || '')}<span class="unit">${escapeHtml(it.unit || '')}</span></div>
+        <div class="label">${escapeHtml(it.label || '')}</div>
+      </div>`
+    )
+    .join('')
+}
+
+export function renderMcnNavMenu(container, menu) {
+  if (!container) return
+  const list = Array.isArray(menu) ? menu.filter((m) => m && (m.title || m.label)) : []
+  if (!list.length) return
+  const ctaSvg = NAV_CTA_SVG
+  container.innerHTML = list
+    .map((item, index) => {
+      const title = item.title || item.label || ''
+      const href = item.href || '#'
+      const isLast = index === list.length - 1
+      const isCta = item.cta === true || item.cta === 'true' || isLast
+      if (isCta) {
+        return `<li><a href="${escapeHtml(href)}" class="nav-cta">${escapeHtml(title)}${ctaSvg}</a></li>`
+      }
+      return `<li><a href="${escapeHtml(href)}">${escapeHtml(title)}</a></li>`
+    })
+    .join('')
+}
+
+export function renderMcnFooterColumns(container, columns) {
+  if (!container) return
+  const list = Array.isArray(columns) ? columns : []
+  container.innerHTML = list
+    .map((col) => {
+      const links = parseLinkLines(col.linksLines || col.links)
+      const lis = links
+        .map((l) => `<li><a href="${escapeHtml(l.href)}">${escapeHtml(l.label)}</a></li>`)
+        .join('')
+      return `<div class="footer-col"><h5>${escapeHtml(col.title || '')}</h5><ul>${lis}</ul></div>`
+    })
+    .join('')
+}
+
+export function renderMcnFooterKeywords(container, keywords) {
+  if (!container) return
+  const list = toLinesArray(keywords)
+  container.innerHTML = list
+    .map((kw, i) => {
+      const sep = i < list.length - 1 ? '<span>·</span>' : ''
+      return `<span>${escapeHtml(kw)}</span>${sep}`
+    })
+    .join('')
+}
+
+export function applyMcnContactFormOptions(config) {
+  const home = config?.pages?.home || {}
+  const fillSelect = (id, options, placeholder) => {
+    const sel = document.getElementById(id)
+    if (!sel) return
+    const opts = toLinesArray(options)
+    const ph = placeholder || '请选择'
+    const current = sel.value
+    sel.innerHTML =
+      `<option value="">${escapeHtml(ph)}</option>` +
+      opts.map((o) => `<option value="${escapeHtml(o)}">${escapeHtml(o)}</option>`).join('')
+    if (current && opts.includes(current)) sel.value = current
+  }
+  fillSelect('mcnCategory', home.contactCategoryOptions, home.contactCategoryPlaceholder)
+  fillSelect('mcnService', home.contactServiceOptions, home.contactServicePlaceholder)
+}
+
 export function applyMcnHomeLists(config) {
   ensureMcnHomeLists(config)
   const home = config.pages.home
@@ -868,6 +1212,30 @@ export function applyMcnHomeLists(config) {
   document.querySelectorAll('[data-list="pages.home.liveItems"]').forEach((el) => renderMcnLiveItems(el, home.liveItems))
   document.querySelectorAll('[data-list="pages.home.caseItems"]').forEach((el) => renderMcnCaseItems(el, home.caseItems))
   document.querySelectorAll('[data-list="pages.home.processSteps"]').forEach((el) => renderMcnProcessSteps(el, home.processSteps))
+  document.querySelectorAll('[data-list="pages.home.heroStats"]').forEach((el) => renderMcnHeroStats(el, home.heroStats))
+  document.querySelectorAll('[data-list="pages.home.dataKpis"]').forEach((el) => renderMcnDataKpis(el, home.dataKpis))
+  document.querySelectorAll('[data-list="pages.home.aboutStats"]').forEach((el) => renderMcnAboutStats(el, home.aboutStats))
+  document.querySelectorAll('[data-list="pages.home.footerColumns"]').forEach((el) =>
+    renderMcnFooterColumns(el, home.footerColumns)
+  )
+  document.querySelectorAll('[data-list="pages.home.footerKeywords"]').forEach((el) =>
+    renderMcnFooterKeywords(el, home.footerKeywords)
+  )
+  document.querySelectorAll('[data-list="global.menu"]').forEach((el) => {
+    if (el.classList.contains('nav-links') || el.closest('.nav')) {
+      renderMcnNavMenu(el, config.global?.menu)
+    }
+  })
+  applyMcnContactFormOptions(config)
+  // sync testimonial avatar from name when empty bind
+  const avatarEl = document.querySelector('[data-bind="pages.home.testimonialAvatar"]')
+  if (avatarEl && home.testimonialName && (!home.testimonialAvatar || home.testimonialAvatar === '王')) {
+    const ch = String(home.testimonialName).trim().charAt(0)
+    if (ch) {
+      home.testimonialAvatar = ch
+      avatarEl.textContent = ch
+    }
+  }
   bindMcnTalentFilter()
   applyMcnTalentFilter()
 }

@@ -1194,6 +1194,15 @@
       gap: 48px;
       margin-bottom: 48px;
     }
+    .footer-cols {
+      display: contents;
+    }
+    .about-body p {
+      margin-bottom: 1em;
+    }
+    .about-body p:last-child {
+      margin-bottom: 0;
+    }
     .footer-brand .logo {
       margin-bottom: 16px;
     }

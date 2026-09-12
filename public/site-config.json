@@ -11,7 +11,7 @@
     },
     "footer": {
       "title": "LET'S GROW TOGETHER",
-      "lead": "达人BD × 自有主播双轮驱动，\n为品牌提供全链路直播电商增长。",
+      "lead": "光子文化是国内领先的以\"达人BD + 自有主播\"双轮驱动的MCN机构，专注于为品牌提供全链路的直播电商解决方案。",
       "brand": "GUANGZI.",
       "copyright": "© 2025 光子文化 GUANGZI MEDIA. All rights reserved.",
       "beian": "",
@@ -30,44 +30,40 @@
     "tel": "010-8596-8820",
     "menu": [
       {
-        "title": "首页",
-        "en": "HOME",
-        "href": "/#home"
-      },
-      {
         "title": "核心服务",
         "en": "SERVICES",
-        "href": "/#services"
+        "href": "#services"
       },
       {
         "title": "达人资源",
         "en": "TALENTS",
-        "href": "/#talents"
+        "href": "#talents"
       },
       {
         "title": "直播案例",
         "en": "LIVE",
-        "href": "/#live"
+        "href": "#live"
       },
       {
         "title": "成功案例",
         "en": "CASES",
-        "href": "/#cases"
+        "href": "#cases"
       },
       {
         "title": "数据看板",
         "en": "DATA",
-        "href": "/#data"
+        "href": "#data"
       },
       {
         "title": "关于我们",
         "en": "ABOUT",
-        "href": "/#about"
+        "href": "#about"
       },
       {
         "title": "合作咨询",
         "en": "CONTACT",
-        "href": "/#contact"
+        "href": "#contact",
+        "cta": true
       }
     ],
     "companyName": "北京光子文化传媒有限公司"
@@ -342,13 +338,13 @@
       "casesEyebrow": "SUCCESS STORIES",
       "dataEyebrow": "DATA DASHBOARD",
       "dataTitle": "销售数据看板",
-      "dataDesc": "用可视化数据呈现 GMV、品类结构与增长趋势",
+      "dataDesc": "透明、真实的业绩数据，见证我们与品牌共同成长的每一步",
       "processEyebrow": "PROCESS",
       "processTitle": "标准化服务流程",
       "processDesc": "从需求诊断到复盘优化，全链路可追踪、可复用",
       "aboutEyebrow": "ABOUT US",
       "aboutTitle": "关于光子文化",
-      "aboutText": "光子文化成立于2019年，总部位于杭州，是国内领先的以\"达人BD + 自有主播\"双轮驱动的MCN机构。",
+      "aboutText": "<p>光子文化成立于2019年，总部位于杭州，是国内领先的以\"达人BD + 自有主播\"双轮驱动的MCN机构。我们深耕直播电商领域五年，构建了覆盖抖音、快手、淘宝、小红书等全平台的达人资源网络，同时签约孵化了86位自有主播。</p><p>公司拥有专业的选品团队、内容策划团队、直播运营团队和数据分析团队，为品牌提供从达人筛选、内容策划、直播执行到数据复盘的全链路服务。凭借专业的服务能力和丰富的行业资源，我们已帮助众多国内外知名品牌实现直播电商渠道的突破性增长。</p>",
       "testimonialText": "与光子文化合作两年，从达人对接到自有主播专场，他们的专业度和执行力让我们非常满意。今年618大促，他们帮我们实现了GMV同比增长180%的好成绩，是值得长期信赖的合作伙伴。",
       "testimonialName": "王梦琪",
       "testimonialRole": "某国货美妆品牌 · 电商总监",
@@ -1026,7 +1022,314 @@
           "title": "复盘优化",
           "desc": "数据复盘报告输出，提供迭代优化建议"
         }
-      ]
+      ],
+      "heroCtaPrimary": "立即对接",
+      "heroCtaSecondary": "了解服务",
+      "heroStats": [
+        {
+          "num": "58",
+          "unit": "亿+",
+          "label": "累计GMV"
+        },
+        {
+          "num": "1200",
+          "unit": "+",
+          "label": "外部合作达人"
+        },
+        {
+          "num": "86",
+          "unit": "位",
+          "label": "自有签约主播"
+        },
+        {
+          "num": "300",
+          "unit": "+",
+          "label": "服务品牌客户"
+        }
+      ],
+      "dataKpis": [
+        {
+          "label": "年度总GMV",
+          "value": "58.2",
+          "unit": "亿元",
+          "trend": "↑ 42.6% YOY"
+        },
+        {
+          "label": "本月GMV",
+          "value": "4.8",
+          "unit": "亿元",
+          "trend": "↑ 12.3% MOM"
+        },
+        {
+          "label": "直播场次",
+          "value": "268",
+          "unit": "场",
+          "trend": "↑ 18.5% MOM"
+        },
+        {
+          "label": "平均转化率",
+          "value": "13.6",
+          "unit": "%",
+          "trend": "↑ 2.1% MOM"
+        }
+      ],
+      "aboutImage": "/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png",
+      "aboutFloatNum": "5年+",
+      "aboutFloatLabel": "深耕直播电商",
+      "aboutStats": [
+        {
+          "num": "150",
+          "unit": "+",
+          "label": "专业团队成员"
+        },
+        {
+          "num": "4",
+          "unit": "大",
+          "label": "主流平台合作"
+        },
+        {
+          "num": "6",
+          "unit": "大",
+          "label": "核心服务能力"
+        }
+      ],
+      "testimonialAvatar": "王",
+      "contactTelLabel": "商务合作热线",
+      "contactEmailLabel": "商务邮箱",
+      "contactAddressLabel": "公司地址",
+      "contactFormTitle": "合作咨询",
+      "contactSubmitText": "提交咨询",
+      "contactNameLabel": "您的姓名 *",
+      "contactPhoneLabel": "联系电话 *",
+      "contactCompanyLabel": "公司名称",
+      "contactCategoryLabel": "主营品类",
+      "contactServiceLabel": "合作服务",
+      "contactMsgLabel": "合作需求描述",
+      "contactNamePlaceholder": "请输入您的姓名",
+      "contactPhonePlaceholder": "请输入您的手机号",
+      "contactCompanyPlaceholder": "请输入公司名称",
+      "contactMsgPlaceholder": "请描述您的合作需求、预算范围等信息...",
+      "contactCategoryPlaceholder": "请选择品类",
+      "contactServicePlaceholder": "请选择服务类型",
+      "contactCategoryOptions": [
+        "美妆护肤",
+        "服饰穿搭",
+        "美食食品",
+        "3C数码",
+        "家居生活",
+        "母婴亲子",
+        "其他"
+      ],
+      "contactServiceOptions": [
+        "达人商务对接",
+        "自有主播合作",
+        "直播代运营",
+        "短视频内容种草",
+        "选品与供应链",
+        "全案合作"
+      ],
+      "footerColumns": [
+        {
+          "title": "核心服务",
+          "linksLines": [
+            "达人商务对接|#services",
+            "自有主播矩阵|#talents",
+            "直播代运营|#live",
+            "短视频种草|#cases",
+            "选品供应链|#services",
+            "数据复盘优化|#data"
+          ]
+        },
+        {
+          "title": "关于我们",
+          "linksLines": [
+            "公司简介|#about",
+            "达人资源|#talents",
+            "成功案例|#cases",
+            "数据看板|#data",
+            "联系我们|#contact"
+          ]
+        },
+        {
+          "title": "联系方式",
+          "linksLines": [
+            "400-888-6666|#contact",
+            "business@guangzi-media.com|#contact",
+            "杭州市余杭区未来科技城|#contact"
+          ]
+        }
+      ],
+      "footerKeywords": [
+        "达人对接",
+        "直播带货",
+        "MCN机构",
+        "品牌增长"
+      ],
+      "dataCharts": {
+        "trend": {
+          "title": "月度销售趋势",
+          "subtitle": "2025年1月 - 8月 GMV走势（单位：亿元）",
+          "categories": [
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月"
+          ],
+          "categoriesLines": [
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月"
+          ],
+          "seriesCurrent": [
+            3.2,
+            2.8,
+            4.1,
+            4.5,
+            5.2,
+            6.8,
+            5.6,
+            4.8
+          ],
+          "seriesCurrentLines": [
+            "3.2",
+            "2.8",
+            "4.1",
+            "4.5",
+            "5.2",
+            "6.8",
+            "5.6",
+            "4.8"
+          ],
+          "seriesLast": [
+            2.1,
+            1.9,
+            2.8,
+            3,
+            3.5,
+            4.6,
+            3.9,
+            3.3
+          ],
+          "seriesLastLines": [
+            "2.1",
+            "1.9",
+            "2.8",
+            "3.0",
+            "3.5",
+            "4.6",
+            "3.9",
+            "3.3"
+          ],
+          "legendCurrent": "GMV",
+          "legendLast": "去年同期"
+        },
+        "pie": {
+          "title": "品类销售占比",
+          "subtitle": "2025年累计各品类GMV占比",
+          "itemsLines": [
+            "美妆护肤|18.2",
+            "服饰穿搭|14.5",
+            "美食食品|10.8",
+            "3C数码|8.6",
+            "家居生活|6.1"
+          ]
+        },
+        "bar": {
+          "title": "各平台渠道GMV对比",
+          "subtitle": "2025年1-8月各平台累计GMV（单位：亿元）",
+          "categories": [
+            "抖音",
+            "快手",
+            "淘宝直播",
+            "小红书"
+          ],
+          "categoriesLines": [
+            "抖音",
+            "快手",
+            "淘宝直播",
+            "小红书"
+          ],
+          "gmv": [
+            24.6,
+            15.2,
+            11.8,
+            6.6
+          ],
+          "gmvLines": [
+            "24.6",
+            "15.2",
+            "11.8",
+            "6.6"
+          ],
+          "sessions": [
+            980,
+            620,
+            450,
+            320
+          ],
+          "sessionsLines": [
+            "980",
+            "620",
+            "450",
+            "320"
+          ],
+          "legendGmv": "GMV(亿元)",
+          "legendSessions": "直播场次"
+        },
+        "growth": {
+          "title": "月度同比增长率",
+          "subtitle": "2025年各月GMV同比增速",
+          "categories": [
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月"
+          ],
+          "categoriesLines": [
+            "1月",
+            "2月",
+            "3月",
+            "4月",
+            "5月",
+            "6月",
+            "7月",
+            "8月"
+          ],
+          "rates": [
+            52.4,
+            47.3,
+            46.2,
+            50.8,
+            48.6,
+            47.8,
+            43.5,
+            45.2
+          ],
+          "ratesLines": [
+            "52.4",
+            "47.3",
+            "46.2",
+            "50.8",
+            "48.6",
+            "47.8",
+            "43.5",
+            "45.2"
+          ]
+        }
+      }
     },
     "service": {
       "seo": {

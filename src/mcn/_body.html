@@ -5,7 +5,7 @@
       <span class="logo-mark" data-bind="pages.home.logoMark">光</span>
       <span data-bind="global.brandSub">光子文化</span>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" data-list="global.menu">
       <li><a href="#services">核心服务</a></li>
       <li><a href="#talents">达人资源</a></li>
       <li><a href="#live">直播案例</a></li>
@@ -42,7 +42,7 @@
         </p>
         <div class="hero-btns">
           <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
-            立即对接
+            <span data-bind="pages.home.heroCtaPrimary">立即对接</span>
             <span class="circle">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </span>
@@ -51,7 +51,7 @@
             <span class="circle">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </span>
-            了解服务
+            <span data-bind="pages.home.heroCtaSecondary">了解服务</span>
           </button>
         </div>
       </div>
@@ -64,31 +64,14 @@
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div class="floating-text">
-            <div class="num">98%</div>
-            <div class="label">客户复购率</div>
+            <div class="num" data-bind="pages.home.heroFloatNum">98%</div>
+            <div class="label" data-bind="pages.home.heroFloatLabel">客户复购率</div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="hero-stats">
-      <div class="hero-stat">
-        <div class="num">58<span class="unit">亿+</span></div>
-        <div class="label">累计GMV</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">1200<span class="unit">+</span></div>
-        <div class="label">外部合作达人</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">86<span class="unit">位</span></div>
-        <div class="label">自有签约主播</div>
-      </div>
-      <div class="hero-stat">
-        <div class="num">300<span class="unit">+</span></div>
-        <div class="label">服务品牌客户</div>
-      </div>
-    </div>
+    <div class="hero-stats" data-list="pages.home.heroStats"></div>
   </div>
 </section>
 
@@ -150,61 +133,35 @@
 <section class="data" id="data" data-home-block="data" data-compose-unit="home-data">
   <div class="container">
     <div class="section-head">
-      <div class="micro-label">DATA DASHBOARD</div>
-      <h2 class="section-title">销售数据看板</h2>
-      <p class="section-desc">
-        透明、真实的业绩数据，见证我们与品牌共同成长的每一步
-      </p>
+      <div class="micro-label"><span data-bind="pages.home.dataEyebrow">DATA DASHBOARD</span></div>
+      <h2 class="section-title"><span data-bind="pages.home.dataTitle">销售数据看板</span></h2>
+      <p class="section-desc"><span data-bind="pages.home.dataDesc">透明、真实的业绩数据，见证我们与品牌共同成长的每一步</span></p>
     </div>
 
-    <!-- KPI Row -->
-    <div class="kpi-row">
-      <div class="kpi-card">
-        <div class="kpi-label">年度总GMV</div>
-        <div class="kpi-value">58.2<span class="kpi-unit">亿元</span></div>
-        <span class="kpi-trend">↑ 42.6% YOY</span>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">本月GMV</div>
-        <div class="kpi-value">4.8<span class="kpi-unit">亿元</span></div>
-        <span class="kpi-trend">↑ 12.3% MOM</span>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">直播场次</div>
-        <div class="kpi-value">268<span class="kpi-unit">场</span></div>
-        <span class="kpi-trend">↑ 18.5% MOM</span>
-      </div>
-      <div class="kpi-card">
-        <div class="kpi-label">平均转化率</div>
-        <div class="kpi-value">13.6<span class="kpi-unit">%</span></div>
-        <span class="kpi-trend">↑ 2.1% MOM</span>
-      </div>
-    </div>
+    <div class="kpi-row" data-list="pages.home.dataKpis"></div>
 
-    <!-- Main chart row -->
     <div class="chart-grid">
       <div class="chart-card">
-        <div class="chart-title">月度销售趋势</div>
-        <div class="chart-subtitle">2025年1月 - 8月 GMV走势（单位：亿元）</div>
+        <div class="chart-title" data-bind="pages.home.dataCharts.trend.title">月度销售趋势</div>
+        <div class="chart-subtitle" data-bind="pages.home.dataCharts.trend.subtitle">2025年1月 - 8月 GMV走势（单位：亿元）</div>
         <div id="chart-trend" class="chart-wrap"></div>
       </div>
       <div class="chart-card">
-        <div class="chart-title">品类销售占比</div>
-        <div class="chart-subtitle">2025年累计各品类GMV占比</div>
+        <div class="chart-title" data-bind="pages.home.dataCharts.pie.title">品类销售占比</div>
+        <div class="chart-subtitle" data-bind="pages.home.dataCharts.pie.subtitle">2025年累计各品类GMV占比</div>
         <div id="chart-pie" class="chart-wrap"></div>
       </div>
     </div>
 
-    <!-- Second chart row -->
     <div class="chart-grid-2">
       <div class="chart-card">
-        <div class="chart-title">各平台渠道GMV对比</div>
-        <div class="chart-subtitle">2025年1-8月各平台累计GMV（单位：亿元）</div>
+        <div class="chart-title" data-bind="pages.home.dataCharts.bar.title">各平台渠道GMV对比</div>
+        <div class="chart-subtitle" data-bind="pages.home.dataCharts.bar.subtitle">2025年1-8月各平台累计GMV（单位：亿元）</div>
         <div id="chart-bar" class="chart-wrap"></div>
       </div>
       <div class="chart-card">
-        <div class="chart-title">月度同比增长率</div>
-        <div class="chart-subtitle">2025年各月GMV同比增速</div>
+        <div class="chart-title" data-bind="pages.home.dataCharts.growth.title">月度同比增长率</div>
+        <div class="chart-subtitle" data-bind="pages.home.dataCharts.growth.subtitle">2025年各月GMV同比增速</div>
         <div id="chart-growth" class="chart-wrap"></div>
       </div>
     </div>
@@ -229,55 +186,44 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap">
-        <img src="/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png" alt="办公环境" />
+        <img data-bind="pages.home.aboutImage" src="/mcn/images/aadkueyw27ofu_ve_miaoda-124bb9e0.png" alt="办公环境" />
         <div class="about-floating">
-          <div class="num">5年+</div>
-          <div class="label">深耕直播电商</div>
+          <div class="num" data-bind="pages.home.aboutFloatNum">5年+</div>
+          <div class="label" data-bind="pages.home.aboutFloatLabel">深耕直播电商</div>
         </div>
       </div>
       <div class="about-text">
         <div class="section-head left">
-          <div class="micro-label">ABOUT US</div>
-          <h2 class="section-title">关于光子文化</h2>
+          <div class="micro-label"><span data-bind="pages.home.aboutEyebrow">ABOUT US</span></div>
+          <h2 class="section-title"><span data-bind="pages.home.aboutTitle">关于光子文化</span></h2>
         </div>
-        <p>
-          光子文化成立于2019年，总部位于杭州，是国内领先的以"达人BD + 自有主播"双轮驱动的MCN机构。
-          我们深耕直播电商领域五年，构建了覆盖抖音、快手、淘宝、小红书等全平台的达人资源网络，
-          同时签约孵化了86位自有主播。
-        </p>
-        <p>
-          公司拥有专业的选品团队、内容策划团队、直播运营团队和数据分析团队，
-          为品牌提供从达人筛选、内容策划、直播执行到数据复盘的全链路服务。
-          凭借专业的服务能力和丰富的行业资源，我们已帮助众多国内外知名品牌实现直播电商渠道的突破性增长。
-        </p>
-        <div class="about-stats">
-          <div class="about-stat">
-            <div class="num">150<span class="unit">+</span></div>
-            <div class="label">专业团队成员</div>
-          </div>
-          <div class="about-stat">
-            <div class="num">4<span class="unit">大</span></div>
-            <div class="label">主流平台合作</div>
-          </div>
-          <div class="about-stat">
-            <div class="num">6<span class="unit">大</span></div>
-            <div class="label">核心服务能力</div>
-          </div>
+        <div class="about-body" data-bind-html="pages.home.aboutText">
+          <p>
+            光子文化成立于2019年，总部位于杭州，是国内领先的以"达人BD + 自有主播"双轮驱动的MCN机构。
+            我们深耕直播电商领域五年，构建了覆盖抖音、快手、淘宝、小红书等全平台的达人资源网络，
+            同时签约孵化了86位自有主播。
+          </p>
+          <p>
+            公司拥有专业的选品团队、内容策划团队、直播运营团队和数据分析团队，
+            为品牌提供从达人筛选、内容策划、直播执行到数据复盘的全链路服务。
+            凭借专业的服务能力和丰富的行业资源，我们已帮助众多国内外知名品牌实现直播电商渠道的突破性增长。
+          </p>
         </div>
+        <div class="about-stats" data-list="pages.home.aboutStats"></div>
       </div>
     </div>
 
     <div class="testimonial-section">
       <div class="testi-mark">"</div>
-      <p class="testi-content">
+      <p class="testi-content" data-bind="pages.home.testimonialText">
         与光子文化合作两年，从达人对接到自有主播专场，他们的专业度和执行力让我们非常满意。
         今年618大促，他们帮我们实现了GMV同比增长180%的好成绩，是值得长期信赖的合作伙伴。
       </p>
       <div class="testi-author">
-        <div class="author-avatar">王</div>
+        <div class="author-avatar" data-bind="pages.home.testimonialAvatar">王</div>
         <div class="author-info">
-          <div class="name">王梦琪</div>
-          <div class="title">某国货美妆品牌 · 电商总监</div>
+          <div class="name" data-bind="pages.home.testimonialName">王梦琪</div>
+          <div class="title" data-bind="pages.home.testimonialRole">某国货美妆品牌 · 电商总监</div>
         </div>
       </div>
     </div>
@@ -385,8 +331,8 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             </div>
             <div class="contact-text">
-              <div class="label">商务合作热线</div>
-              <div class="value">400-888-6666</div>
+              <div class="label" data-bind="pages.home.contactTelLabel">商务合作热线</div>
+              <div class="value" data-bind="pages.home.contactTel">400-888-6666</div>
             </div>
           </li>
           <li>
@@ -394,8 +340,8 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             </div>
             <div class="contact-text">
-              <div class="label">商务邮箱</div>
-              <div class="value">business@guangzi-media.com</div>
+              <div class="label" data-bind="pages.home.contactEmailLabel">商务邮箱</div>
+              <div class="value" data-bind="pages.home.contactEmail">business@guangzi-media.com</div>
             </div>
           </li>
           <li>
@@ -403,67 +349,55 @@
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
             </div>
             <div class="contact-text">
-              <div class="label">公司地址</div>
-              <div class="value">杭州市余杭区未来科技城梦想小镇创业大街28号楼</div>
+              <div class="label" data-bind="pages.home.contactAddressLabel">公司地址</div>
+              <div class="value" data-bind="pages.home.contactAddress">杭州市余杭区未来科技城梦想小镇创业大街28号楼</div>
             </div>
           </li>
         </ul>
       </div>
 
       <div class="contact-form">
-        <h3 class="form-title">合作咨询</h3>
+        <h3 class="form-title" data-bind="pages.home.contactFormTitle">合作咨询</h3>
         <form id="mcnContactForm">
           <div class="form-row">
             <div class="form-group">
-              <label for="mcnName">您的姓名 *</label>
-              <input type="text" id="mcnName" name="name" required placeholder="请输入您的姓名" />
+              <label for="mcnName" data-bind="pages.home.contactNameLabel">您的姓名 *</label>
+              <input type="text" id="mcnName" name="name" required data-bind="pages.home.contactNamePlaceholder" placeholder="请输入您的姓名" />
             </div>
             <div class="form-group">
-              <label for="mcnPhone">联系电话 *</label>
-              <input type="tel" id="mcnPhone" name="tel" required placeholder="请输入您的手机号" />
+              <label for="mcnPhone" data-bind="pages.home.contactPhoneLabel">联系电话 *</label>
+              <input type="tel" id="mcnPhone" name="tel" required data-bind="pages.home.contactPhonePlaceholder" placeholder="请输入您的手机号" />
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="mcnCompany">公司名称</label>
-              <input type="text" id="mcnCompany" name="company" placeholder="请输入公司名称" />
+              <label for="mcnCompany" data-bind="pages.home.contactCompanyLabel">公司名称</label>
+              <input type="text" id="mcnCompany" name="company" data-bind="pages.home.contactCompanyPlaceholder" placeholder="请输入公司名称" />
             </div>
             <div class="form-group">
-              <label for="mcnCategory">主营品类</label>
+              <label for="mcnCategory" data-bind="pages.home.contactCategoryLabel">主营品类</label>
               <select id="mcnCategory" name="category">
                 <option value="">请选择品类</option>
-                <option>美妆护肤</option>
-                <option>服饰穿搭</option>
-                <option>美食食品</option>
-                <option>3C数码</option>
-                <option>家居生活</option>
-                <option>母婴亲子</option>
-                <option>其他</option>
               </select>
             </div>
           </div>
           <div class="form-group">
-            <label for="mcnService">合作服务</label>
+            <label for="mcnService" data-bind="pages.home.contactServiceLabel">合作服务</label>
             <select id="mcnService" name="serviceType">
               <option value="">请选择服务类型</option>
-              <option>达人商务对接</option>
-              <option>自有主播合作</option>
-              <option>直播代运营</option>
-              <option>短视频内容种草</option>
-              <option>选品与供应链</option>
-              <option>全案合作</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="mcnMsg">合作需求描述</label>
-            <textarea id="mcnMsg" name="content" placeholder="请描述您的合作需求、预算范围等信息..."></textarea>
+            <label for="mcnMsg" data-bind="pages.home.contactMsgLabel">合作需求描述</label>
+            <textarea id="mcnMsg" name="content" data-bind="pages.home.contactMsgPlaceholder" placeholder="请描述您的合作需求、预算范围等信息..."></textarea>
           </div>
           <button type="submit" class="form-submit">
-            提交咨询
+            <span data-bind="pages.home.contactSubmitText">提交咨询</span>
             <span class="circle">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </span>
           </button>
+          <p id="mcnFormStatus" hidden></p>
         </form>
       </div>
     </div>
@@ -475,55 +409,19 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="logo">
-            <span class="logo-mark">光</span>
-            <span>光子文化</span>
+            <span class="logo-mark" data-bind="pages.home.logoMark">光</span>
+            <span data-bind="global.brandSub">光子文化</span>
           </div>
-          <p>
+          <p data-bind="global.footer.lead">
             光子文化是国内领先的以"达人BD + 自有主播"双轮驱动的MCN机构，
             专注于为品牌提供全链路的直播电商解决方案。
           </p>
         </div>
-        <div class="footer-col">
-          <h5>核心服务</h5>
-          <ul>
-            <li><a href="#">达人商务对接</a></li>
-            <li><a href="#">自有主播矩阵</a></li>
-            <li><a href="#">直播代运营</a></li>
-            <li><a href="#">短视频种草</a></li>
-            <li><a href="#">选品供应链</a></li>
-            <li><a href="#">数据复盘优化</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>关于我们</h5>
-          <ul>
-            <li><a href="#about">公司简介</a></li>
-            <li><a href="#talents">达人资源</a></li>
-            <li><a href="#cases">成功案例</a></li>
-            <li><a href="#data">数据看板</a></li>
-            <li><a href="#contact">联系我们</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h5>联系方式</h5>
-          <ul>
-            <li><a href="#">400-888-6666</a></li>
-            <li><a href="#">business@guangzi-media.com</a></li>
-            <li><a href="#">杭州市余杭区未来科技城</a></li>
-          </ul>
-        </div>
+        <div class="footer-cols" data-list="pages.home.footerColumns"></div>
       </div>
       <div class="footer-bottom">
-        <div>© 2025 光子文化 GUANGZI MEDIA. All rights reserved.</div>
-        <div class="footer-keywords">
-          <span>达人对接</span>
-          <span>·</span>
-          <span>直播带货</span>
-          <span>·</span>
-          <span>MCN机构</span>
-          <span>·</span>
-          <span>品牌增长</span>
-        </div>
+        <div data-bind="global.footer.copyright">© 2025 光子文化 GUANGZI MEDIA. All rights reserved.</div>
+        <div class="footer-keywords" data-list="pages.home.footerKeywords"></div>
       </div>
     </div>
   </footer>

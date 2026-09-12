@@ -6,6 +6,7 @@ import './mcn-detail.css'
 import '../agency/agency-components.css'
 
 let siteConfig = null
+let wired = false
 
 function wireNavToggle() {
   const btn = document.querySelector('.nav-toggle')
@@ -81,29 +82,40 @@ function wireContactForm() {
   })
 }
 
-async function boot() {
-  wireNavToggle()
-  wireSmoothAnchors()
-  wireContactForm()
+function refreshCharts(cfg) {
+  if (typeof window.echarts === 'undefined') return
+  try {
+    initMcnCharts(window.echarts, cfg)
+  } catch (err) {
+    console.warn('[mcn] charts init failed', err)
+  }
+}
+
+async function boot(incoming) {
+  if (!wired) {
+    wireNavToggle()
+    wireSmoothAnchors()
+    wireContactForm()
+    wired = true
+  }
 
   try {
-    siteConfig = await loadSiteConfig()
+    siteConfig = incoming || (await loadSiteConfig())
     await applySiteConfig(siteConfig)
   } catch (err) {
     console.warn('[mcn] config load failed', err)
   }
 
   wireCreativeHeroSound()
-
-  if (typeof window.echarts !== 'undefined') {
-    try {
-      initMcnCharts(window.echarts)
-    } catch (err) {
-      console.warn('[mcn] charts init failed', err)
-    }
-  }
-
-  listenPreviewReload?.(() => window.location.reload())
+  refreshCharts(siteConfig)
 }
 
 boot()
+
+listenPreviewReload?.(async (incoming) => {
+  try {
+    await boot(incoming || null)
+  } catch (err) {
+    console.warn('[mcn] preview reload failed', err)
+  }
+})

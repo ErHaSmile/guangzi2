@@ -176,6 +176,338 @@ function clone(obj) {
   return JSON.parse(JSON.stringify(obj))
 }
 
+/** 各组件 JSON 编辑范围：root 下列出 keys，整段可复制给 AI 修改 */
+const COMPONENT_JSON_SCOPES = {
+  seo: { root: 'pages.home', keys: ['seo'] },
+  hero: {
+    root: 'pages.home',
+    keys: [
+      'logoMark',
+      'heroEyebrow',
+      'heroTitleHtml',
+      'heroDesc',
+      'heroImage',
+      'heroFloatNum',
+      'heroFloatLabel',
+      'heroCtaPrimary',
+      'heroCtaSecondary',
+      'heroStats',
+    ],
+  },
+  services: {
+    root: 'pages.home',
+    keys: ['servicesEyebrow', 'servicesTitle', 'servicesDesc', 'serviceItems'],
+  },
+  talents: {
+    root: 'pages.home',
+    keys: [
+      'talentsEyebrow',
+      'talentsTitle',
+      'talentsDesc',
+      'talentCategories',
+      'talentDefaultCategory',
+      'talentItems',
+    ],
+  },
+  live: {
+    root: 'pages.home',
+    keys: ['liveEyebrow', 'liveTitle', 'liveDesc', 'liveItems'],
+  },
+  cases: {
+    root: 'pages.home',
+    keys: ['casesEyebrow', 'casesTitle', 'casesDesc', 'caseItems'],
+  },
+  data: {
+    root: 'pages.home',
+    keys: ['dataEyebrow', 'dataTitle', 'dataDesc', 'dataKpis', 'dataCharts'],
+  },
+  process: {
+    root: 'pages.home',
+    keys: ['processEyebrow', 'processTitle', 'processDesc', 'processSteps'],
+  },
+  creativeHero: {
+    root: 'pages.home',
+    keys: ['videoHeroTitle', 'videoHeroSubtitle', 'video'],
+  },
+  clients: {
+    root: 'pages.home',
+    keys: ['clientsTitle', 'clientsTitleEn', 'clientsBrandMark', 'clientsRankNote', 'clientsGroups'],
+  },
+  team: {
+    root: 'pages.about',
+    keys: ['teamTitle', 'teamTitleEn', 'teamMembers'],
+  },
+  about: {
+    root: 'pages.home',
+    keys: [
+      'aboutEyebrow',
+      'aboutTitle',
+      'aboutText',
+      'aboutImage',
+      'aboutFloatNum',
+      'aboutFloatLabel',
+      'aboutStats',
+      'testimonialText',
+      'testimonialName',
+      'testimonialRole',
+      'testimonialAvatar',
+    ],
+  },
+  contact: {
+    root: 'pages.home',
+    keys: [
+      'contactEyebrow',
+      'contactTitleHtml',
+      'contactDesc',
+      'contactTel',
+      'contactEmail',
+      'contactAddress',
+      'contactTelLabel',
+      'contactEmailLabel',
+      'contactAddressLabel',
+      'contactFormTitle',
+      'contactSubmitText',
+      'contactNameLabel',
+      'contactPhoneLabel',
+      'contactCompanyLabel',
+      'contactCategoryLabel',
+      'contactServiceLabel',
+      'contactMsgLabel',
+      'contactNamePlaceholder',
+      'contactPhonePlaceholder',
+      'contactCompanyPlaceholder',
+      'contactMsgPlaceholder',
+      'contactCategoryPlaceholder',
+      'contactServicePlaceholder',
+      'contactCategoryOptions',
+      'contactServiceOptions',
+      'contactSuccessText',
+      'footerColumns',
+      'footerKeywords',
+    ],
+  },
+}
+
+function resolveJsonScope(item) {
+  if (!item) return null
+  if (item.jsonScope) return item.jsonScope
+  if (item.id && COMPONENT_JSON_SCOPES[item.id]) return COMPONENT_JSON_SCOPES[item.id]
+
+  // 首页/菜单配置栏芯片：id 形如 asm:home-hero，需还原到 itemId（hero）
+  const unitId =
+    item.styleUnitId ||
+    (String(item.id || '').startsWith('asm:') ? String(item.id).slice(4) : '') ||
+    ''
+  if (unitId) {
+    const unit = getPageUnit(unitId, config)
+    if (unit?.itemId && COMPONENT_JSON_SCOPES[unit.itemId]) {
+      return COMPONENT_JSON_SCOPES[unit.itemId]
+    }
+    if (getCustomComponent(config, unitId)) {
+      return { kind: 'customComponent', id: unitId }
+    }
+  }
+
+  if (item.id && getCustomComponent(config, item.id)) {
+    return { kind: 'customComponent', id: item.id }
+  }
+  return null
+}
+
+function collectJsonScopeData(scope) {
+  if (!scope) return null
+  if (scope.kind === 'customComponent') {
+    const inst = getCustomComponent(config, scope.id)
+    return inst ? clone(inst) : null
+  }
+  if (scope.path) {
+    const val = getPath(config, scope.path)
+    return val == null ? null : clone(val)
+  }
+  const root = String(scope.root || '')
+  const keys = Array.isArray(scope.keys) ? scope.keys : []
+  const out = {}
+  keys.forEach((key) => {
+    const full = root ? `${root}.${key}` : key
+    const val = getPath(config, full)
+    out[key] = val === undefined ? null : clone(val)
+  })
+  return out
+}
+
+function applyJsonScopeData(scope, parsed) {
+  if (!scope || parsed == null || typeof parsed !== 'object' || Array.isArray(parsed)) {
+    throw new Error('JSON 须为对象')
+  }
+  if (scope.kind === 'customComponent') {
+    const cur = getCustomComponent(config, scope.id)
+    if (!cur) throw new Error('未找到该图片组件')
+    const next = { ...parsed, id: cur.id, type: cur.type || parsed.type || 'gallery' }
+    updateCustomComponent(config, scope.id, next)
+    return
+  }
+  if (scope.path) {
+    setPath(config, scope.path, parsed)
+    return
+  }
+  const root = String(scope.root || '')
+  const keys = Array.isArray(scope.keys) ? scope.keys : Object.keys(parsed)
+  keys.forEach((key) => {
+    if (!Object.prototype.hasOwnProperty.call(parsed, key)) return
+    const full = root ? `${root}.${key}` : key
+    setPath(config, full, parsed[key])
+  })
+  // 允许 AI 多写同 root 下的额外字段
+  Object.keys(parsed).forEach((key) => {
+    if (keys.includes(key)) return
+    const full = root ? `${root}.${key}` : key
+    setPath(config, full, parsed[key])
+  })
+}
+
+function createComponentJsonPanel(item, { onApplied } = {}) {
+  const scope = resolveJsonScope(item)
+  const wrap = document.createElement('div')
+  wrap.className = 'component-json-panel'
+
+  if (!scope) {
+    wrap.innerHTML =
+      '<p class="section-note">当前项未配置 JSON 数据范围（如菜单编排、素材库等系统页）。</p>'
+    return wrap
+  }
+
+  const note = document.createElement('p')
+  note.className = 'section-note'
+  note.textContent =
+    '完整组件数据（可复制给 AI 批量改）。点「应用 JSON」写回配置并刷新预览；记得再点保存入库。'
+  const ta = document.createElement('textarea')
+  ta.className = 'component-json-editor'
+  ta.spellcheck = false
+  ta.setAttribute('aria-label', '组件 JSON')
+  const status = document.createElement('p')
+  status.className = 'component-json-status'
+  status.hidden = true
+
+  const syncText = () => {
+    const data = collectJsonScopeData(scope)
+    ta.value = JSON.stringify(data, null, 2)
+    status.hidden = true
+  }
+  syncText()
+
+  const actions = document.createElement('div')
+  actions.className = 'component-json-actions'
+  const applyBtn = document.createElement('button')
+  applyBtn.type = 'button'
+  applyBtn.className = 'btn btn-primary'
+  applyBtn.textContent = '应用 JSON'
+  const reloadBtn = document.createElement('button')
+  reloadBtn.type = 'button'
+  reloadBtn.className = 'btn'
+  reloadBtn.textContent = '重新读取'
+  const copyBtn = document.createElement('button')
+  copyBtn.type = 'button'
+  copyBtn.className = 'btn'
+  copyBtn.textContent = '复制'
+
+  const setStatus = (msg, ok = true) => {
+    status.hidden = !msg
+    status.textContent = msg || ''
+    status.classList.toggle('is-err', !ok)
+    status.classList.toggle('is-ok', !!ok && !!msg)
+  }
+
+  applyBtn.addEventListener('click', () => {
+    try {
+      const parsed = JSON.parse(ta.value)
+      applyJsonScopeData(scope, parsed)
+      markDirty()
+      schedulePreview()
+      syncText()
+      setStatus('已应用，预览已更新', true)
+      onApplied?.()
+      notify('JSON 已应用到组件', 'ok')
+    } catch (err) {
+      setStatus(err?.message || 'JSON 无效', false)
+      notify(err?.message || 'JSON 无效', 'err')
+    }
+  })
+  reloadBtn.addEventListener('click', () => {
+    syncText()
+    setStatus('已从当前配置重新读取', true)
+  })
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(ta.value)
+      setStatus('已复制到剪贴板', true)
+      notify('已复制 JSON', 'ok')
+    } catch {
+      ta.select()
+      setStatus('复制失败，已选中文本可手动 Ctrl+C', false)
+    }
+  })
+
+  actions.append(applyBtn, reloadBtn, copyBtn)
+  wrap.append(note, ta, actions, status)
+  wrap._reloadJson = syncText
+  return wrap
+}
+
+function wrapEditorWithJsonMode(item, formNode) {
+  const scope = resolveJsonScope(item)
+  if (!scope) return formNode
+
+  const shell = document.createElement('div')
+  shell.className = 'editor-mode-shell'
+
+  const tabs = document.createElement('div')
+  tabs.className = 'editor-mode-tabs'
+  tabs.setAttribute('role', 'tablist')
+  const formTab = document.createElement('button')
+  formTab.type = 'button'
+  formTab.className = 'editor-mode-tab is-active'
+  formTab.textContent = '表单'
+  formTab.setAttribute('role', 'tab')
+  formTab.setAttribute('aria-selected', 'true')
+  const jsonTab = document.createElement('button')
+  jsonTab.type = 'button'
+  jsonTab.className = 'editor-mode-tab'
+  jsonTab.textContent = 'JSON'
+  jsonTab.setAttribute('role', 'tab')
+  jsonTab.setAttribute('aria-selected', 'false')
+  tabs.append(formTab, jsonTab)
+
+  const formPane = document.createElement('div')
+  formPane.className = 'editor-mode-pane is-active'
+  formPane.appendChild(formNode)
+
+  const jsonPane = document.createElement('div')
+  jsonPane.className = 'editor-mode-pane'
+  const jsonPanel = createComponentJsonPanel(item)
+  jsonPane.appendChild(jsonPanel)
+
+  const setMode = (mode) => {
+    const isJson = mode === 'json'
+    formTab.classList.toggle('is-active', !isJson)
+    jsonTab.classList.toggle('is-active', isJson)
+    formTab.setAttribute('aria-selected', String(!isJson))
+    jsonTab.setAttribute('aria-selected', String(isJson))
+    formPane.classList.toggle('is-active', !isJson)
+    jsonPane.classList.toggle('is-active', isJson)
+    if (isJson) {
+      jsonPanel._reloadJson?.()
+    } else {
+      // 从 JSON 切回表单时重建，避免仍显示旧字段值
+      formPane.replaceChildren(item.build())
+    }
+  }
+  formTab.addEventListener('click', () => setMode('form'))
+  jsonTab.addEventListener('click', () => setMode('json'))
+
+  shell.append(tabs, formPane, jsonPane)
+  return shell
+}
+
 /** 菜单组装内编辑时：读写走 slot.componentSettings，不覆盖组件库默认值 */
 let contentEditContext = null // { slotId, unitId } | null
 
@@ -2916,7 +3248,27 @@ function openComponentPreviewModal(unitOrId, opts = {}) {
         ? el
         : el.querySelector('[data-compose-unit], [data-custom-unit]')
       if (innerUnit && innerUnit !== el) applySurfaceToElement(innerUnit, unit.id, config, previewSlot)
-      const previewBg = applied?.bg || (applied?.tone === 'light' ? '#f7f7f7' : '#0b0d12')
+
+      // 预览底色：有风格预设用预设；「默认」时跟官网组件实际背景 / nativeTone，避免误用深色
+      const profile = getComponentSurfaceProfile(unit.id)
+      let previewBg = applied?.bg || ''
+      if (!previewBg) {
+        const computed = win?.getComputedStyle?.(el)?.backgroundColor || ''
+        const transparent =
+          !computed ||
+          computed === 'transparent' ||
+          computed === 'rgba(0, 0, 0, 0)' ||
+          computed === 'rgba(0,0,0,0)'
+        if (!transparent) {
+          previewBg = computed
+        } else if (applied?.tone === 'light' || profile?.nativeTone === 'light') {
+          previewBg = '#ffffff'
+        } else if (applied?.tone === 'dark' || profile?.nativeTone === 'dark') {
+          previewBg = '#0b0d12'
+        } else {
+          previewBg = '#ffffff'
+        }
+      }
 
       let previewStyle = doc.getElementById('component-preview-style')
       if (!previewStyle) {
@@ -4557,6 +4909,18 @@ function getConfigItems(sectionId) {
             field('Logo 字标', 'pages.home.logoMark'),
             field('浮卡数字', 'pages.home.heroFloatNum'),
             field('浮卡文案', 'pages.home.heroFloatLabel'),
+            field('主按钮文案', 'pages.home.heroCtaPrimary'),
+            field('次按钮文案', 'pages.home.heroCtaSecondary'),
+            listEditor({
+              title: '首屏底部数据',
+              path: 'pages.home.heroStats',
+              blank: { num: '0', unit: '+', label: '新指标' },
+              fields: [
+                { key: 'num', label: '数值' },
+                { key: 'unit', label: '单位' },
+                { key: 'label', label: '说明' },
+              ],
+            }),
           ]),
       },
       {
@@ -4740,15 +5104,50 @@ function getConfigItems(sectionId) {
         id: 'data',
         category: '数据',
         label: '数据看板',
-        hint: '销售数据看板文案',
+        hint: '销售数据看板 KPI 与图表',
         toggleKey: 'data',
+        wide: true,
         build: () =>
           block('', [
             homeBlockToggleNote('data'),
             field('眉题', 'pages.home.dataEyebrow'),
             field('标题', 'pages.home.dataTitle'),
             field('描述', 'pages.home.dataDesc', 'textarea', { rows: 3 }),
-            sectionNote('图表数值本版暂保持脚本默认；后续可再做成可配置序列。'),
+            listEditor({
+              title: 'KPI 卡片',
+              path: 'pages.home.dataKpis',
+              blank: { label: '新指标', value: '0', unit: '', trend: '↑ 0%' },
+              fields: [
+                { key: 'label', label: '标签' },
+                { key: 'value', label: '数值' },
+                { key: 'unit', label: '单位' },
+                { key: 'trend', label: '趋势文案' },
+              ],
+            }),
+            sectionNote('图表：标题用下方字段；序列用「每行一项」。折线/柱状数值每行一个数；饼图每行「品类|数值」。'),
+            field('趋势图标题', 'pages.home.dataCharts.trend.title'),
+            field('趋势图副标题', 'pages.home.dataCharts.trend.subtitle'),
+            field('趋势图图例-本期', 'pages.home.dataCharts.trend.legendCurrent'),
+            field('趋势图图例-同期', 'pages.home.dataCharts.trend.legendLast'),
+            field('趋势图横轴', 'pages.home.dataCharts.trend.categoriesLines', 'lines', {
+              hint: '每行一个月份，如 1月',
+            }),
+            field('趋势图本期序列', 'pages.home.dataCharts.trend.seriesCurrentLines', 'lines'),
+            field('趋势图去年序列', 'pages.home.dataCharts.trend.seriesLastLines', 'lines'),
+            field('饼图标题', 'pages.home.dataCharts.pie.title'),
+            field('饼图副标题', 'pages.home.dataCharts.pie.subtitle'),
+            field('饼图数据', 'pages.home.dataCharts.pie.itemsLines', 'lines', {
+              hint: '每行：品类|数值，如 美妆护肤|18.2',
+            }),
+            field('柱状图标题', 'pages.home.dataCharts.bar.title'),
+            field('柱状图副标题', 'pages.home.dataCharts.bar.subtitle'),
+            field('柱状图横轴', 'pages.home.dataCharts.bar.categoriesLines', 'lines'),
+            field('柱状图 GMV', 'pages.home.dataCharts.bar.gmvLines', 'lines'),
+            field('柱状图场次', 'pages.home.dataCharts.bar.sessionsLines', 'lines'),
+            field('增长图标题', 'pages.home.dataCharts.growth.title'),
+            field('增长图副标题', 'pages.home.dataCharts.growth.subtitle'),
+            field('增长图横轴', 'pages.home.dataCharts.growth.categoriesLines', 'lines'),
+            field('增长图增速%', 'pages.home.dataCharts.growth.ratesLines', 'lines'),
           ]),
       },
       {
@@ -4853,10 +5252,29 @@ function getConfigItems(sectionId) {
             homeBlockToggleNote('about'),
             field('眉题', 'pages.home.aboutEyebrow'),
             field('标题', 'pages.home.aboutTitle'),
-            field('正文', 'pages.home.aboutText', 'textarea', { rows: 5 }),
+            field('正文 HTML', 'pages.home.aboutText', 'textarea', {
+              rows: 6,
+              hint: '可用 <p>…</p> 分段',
+            }),
+            field('配图', 'pages.home.aboutImage', 'image'),
+            field('浮标数字', 'pages.home.aboutFloatNum'),
+            field('浮标文案', 'pages.home.aboutFloatLabel'),
+            listEditor({
+              title: '关于区统计',
+              path: 'pages.home.aboutStats',
+              blank: { num: '0', unit: '+', label: '新指标' },
+              fields: [
+                { key: 'num', label: '数值' },
+                { key: 'unit', label: '单位' },
+                { key: 'label', label: '说明' },
+              ],
+            }),
             field('证言', 'pages.home.testimonialText', 'textarea', { rows: 4 }),
             field('证言姓名', 'pages.home.testimonialName'),
             field('证言职位', 'pages.home.testimonialRole'),
+            field('证言头像字', 'pages.home.testimonialAvatar', 'text', {
+              hint: '默认取姓名首字',
+            }),
           ]),
       },
       {
@@ -4874,7 +5292,45 @@ function getConfigItems(sectionId) {
             field('热线', 'pages.home.contactTel'),
             field('邮箱', 'pages.home.contactEmail'),
             field('地址', 'pages.home.contactAddress', 'textarea', { rows: 2 }),
+            field('热线标签', 'pages.home.contactTelLabel'),
+            field('邮箱标签', 'pages.home.contactEmailLabel'),
+            field('地址标签', 'pages.home.contactAddressLabel'),
+            field('表单标题', 'pages.home.contactFormTitle'),
+            field('提交按钮', 'pages.home.contactSubmitText'),
+            field('姓名标签', 'pages.home.contactNameLabel'),
+            field('电话标签', 'pages.home.contactPhoneLabel'),
+            field('公司标签', 'pages.home.contactCompanyLabel'),
+            field('品类标签', 'pages.home.contactCategoryLabel'),
+            field('服务标签', 'pages.home.contactServiceLabel'),
+            field('需求标签', 'pages.home.contactMsgLabel'),
+            field('姓名占位', 'pages.home.contactNamePlaceholder'),
+            field('电话占位', 'pages.home.contactPhonePlaceholder'),
+            field('公司占位', 'pages.home.contactCompanyPlaceholder'),
+            field('需求占位', 'pages.home.contactMsgPlaceholder'),
+            field('品类选项', 'pages.home.contactCategoryOptions', 'lines', {
+              hint: '每行一个选项',
+            }),
+            field('服务选项', 'pages.home.contactServiceOptions', 'lines', {
+              hint: '每行一个选项',
+            }),
             field('提交成功提示', 'pages.home.contactSuccessText'),
+            listEditor({
+              title: '页脚链接列',
+              path: 'pages.home.footerColumns',
+              blank: { title: '新列', linksLines: ['链接文案|#'] },
+              fields: [
+                { key: 'title', label: '列标题' },
+                {
+                  key: 'linksLines',
+                  label: '链接（每行：文案|链接）',
+                  type: 'lines',
+                  full: true,
+                },
+              ],
+            }),
+            field('页脚关键词', 'pages.home.footerKeywords', 'lines', {
+              hint: '每行一个关键词，显示在版权旁',
+            }),
           ]),
       },
     ])
@@ -5630,7 +6086,13 @@ function openEditorModal(item, { stack = false, onClose } = {}) {
   if (surfaceCtx?.unitId) {
     body.appendChild(createComponentSurfaceField(surfaceCtx.unitId, surfaceCtx.slot))
   }
-  body.appendChild(item.build())
+  const formNode = item.build()
+  body.appendChild(wrapEditorWithJsonMode(item, formNode))
+
+  // JSON 编辑需要更宽面板
+  if (resolveJsonScope(item)) {
+    panel.classList.add('config-editor-panel-wide')
+  }
 
   const foot = document.createElement('div')
   foot.className = 'modal-foot'
