@@ -1408,26 +1408,6 @@ body.is-workspace-mode .admin-workspace {
   border-color: rgba(143, 179, 57, 0.45);
 }
 
-.component-json-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.component-json-status {
-  margin: 0;
-  font-size: 12px;
-  color: rgba(232, 245, 184, 0.9);
-}
-
-.component-json-status.is-err {
-  color: #fca5a5;
-}
-
-.component-json-status.is-ok {
-  color: #bbf7d0;
-}
-
 /* Tabs / form grid / compact list editors */
 .tabs-panel {
   display: flex;

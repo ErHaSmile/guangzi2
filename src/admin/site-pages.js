@@ -662,10 +662,13 @@ export function syncMenuAssembly(config) {
   if (telItem) {
     menu.push({ title: telItem.title, en: telItem.en || 'Call Us Now', href: telItem.href })
   } else if (config.global.tel) {
+    const tel = String(config.global.tel).trim()
+    const label = String(config.global.telLabel || '').trim() || `TEL：${tel}`
     menu.push({
-      title: `TEL：${config.global.tel}`,
+      title: label,
       en: 'Call Us Now',
-      href: `tel:${String(config.global.tel).replace(/\s/g, '')}`,
+      href: `tel:${tel.replace(/\s/g, '')}`,
+      cta: true,
     })
   }
   config.global.menu = menu

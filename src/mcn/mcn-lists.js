@@ -153,6 +153,50 @@ export const DEFAULT_MCN_FOOTER_COLUMNS = [
 
 export const DEFAULT_MCN_FOOTER_KEYWORDS = ['达人对接', '直播带货', 'MCN机构', '品牌增长']
 
+function normalizeFooterColumns(columns) {
+  return (Array.isArray(columns) ? columns : []).map((c) => ({
+    title: c?.title || '',
+    linksLines: Array.isArray(c?.linksLines)
+      ? [...c.linksLines]
+      : Array.isArray(c?.links)
+        ? c.links.map((l) => `${l.label || ''}|${l.href || '#'}`)
+        : [],
+  }))
+}
+
+/** 页尾列/关键词归到 global.footer；兼容旧 pages.home.footerColumns */
+export function ensureMcnFooter(config) {
+  if (!config.global || typeof config.global !== 'object') config.global = {}
+  if (!config.global.footer || typeof config.global.footer !== 'object') config.global.footer = {}
+  const footer = config.global.footer
+  const home = config.pages?.home && typeof config.pages.home === 'object' ? config.pages.home : {}
+
+  const legacyColumns = Array.isArray(home.footerColumns) ? home.footerColumns : null
+  const legacyKeywords = Array.isArray(home.footerKeywords) ? home.footerKeywords : null
+
+  if (!Array.isArray(footer.columns) || !footer.columns.length) {
+    footer.columns = normalizeFooterColumns(
+      legacyColumns?.length ? legacyColumns : DEFAULT_MCN_FOOTER_COLUMNS
+    )
+  } else {
+    footer.columns = normalizeFooterColumns(footer.columns)
+  }
+
+  if (!Array.isArray(footer.keywords) || !footer.keywords.length) {
+    footer.keywords =
+      legacyKeywords?.length ? [...legacyKeywords] : [...DEFAULT_MCN_FOOTER_KEYWORDS]
+  }
+
+  // 同步旧路径，避免残留编辑器或外部脚本仍读写 home 时丢数据
+  if (home && typeof home === 'object') {
+    home.footerColumns = footer.columns.map((c) => ({
+      title: c.title,
+      linksLines: [...(c.linksLines || [])],
+    }))
+    home.footerKeywords = [...footer.keywords]
+  }
+}
+
 export const DEFAULT_MCN_CATEGORY_OPTIONS = [
   '美妆护肤',
   '服饰穿搭',
@@ -772,20 +816,7 @@ export function ensureMcnHomeLists(config) {
   fillObjects('heroStats', DEFAULT_MCN_HERO_STATS)
   fillObjects('dataKpis', DEFAULT_MCN_DATA_KPIS)
   fillObjects('aboutStats', DEFAULT_MCN_ABOUT_STATS)
-  fillObjects('footerColumns', DEFAULT_MCN_FOOTER_COLUMNS)
-  if (Array.isArray(home.footerColumns)) {
-    home.footerColumns = home.footerColumns.map((c) => ({
-      title: c?.title || '',
-      linksLines: Array.isArray(c?.linksLines)
-        ? [...c.linksLines]
-        : Array.isArray(c?.links)
-          ? c.links.map((l) => `${l.label || ''}|${l.href || '#'}`)
-          : [],
-    }))
-  }
-  if (!Array.isArray(home.footerKeywords) || !home.footerKeywords.length) {
-    home.footerKeywords = [...DEFAULT_MCN_FOOTER_KEYWORDS]
-  }
+  ensureMcnFooter(config)
   if (!Array.isArray(home.contactCategoryOptions) || !home.contactCategoryOptions.length) {
     home.contactCategoryOptions = [...DEFAULT_MCN_CATEGORY_OPTIONS]
   }
@@ -1215,11 +1246,14 @@ export function applyMcnHomeLists(config) {
   document.querySelectorAll('[data-list="pages.home.heroStats"]').forEach((el) => renderMcnHeroStats(el, home.heroStats))
   document.querySelectorAll('[data-list="pages.home.dataKpis"]').forEach((el) => renderMcnDataKpis(el, home.dataKpis))
   document.querySelectorAll('[data-list="pages.home.aboutStats"]').forEach((el) => renderMcnAboutStats(el, home.aboutStats))
-  document.querySelectorAll('[data-list="pages.home.footerColumns"]').forEach((el) =>
-    renderMcnFooterColumns(el, home.footerColumns)
+  const footer = config.global?.footer || {}
+  const footerColumns = footer.columns?.length ? footer.columns : home.footerColumns
+  const footerKeywords = footer.keywords?.length ? footer.keywords : home.footerKeywords
+  document.querySelectorAll('[data-list="global.footer.columns"], [data-list="pages.home.footerColumns"]').forEach((el) =>
+    renderMcnFooterColumns(el, footerColumns)
   )
-  document.querySelectorAll('[data-list="pages.home.footerKeywords"]').forEach((el) =>
-    renderMcnFooterKeywords(el, home.footerKeywords)
+  document.querySelectorAll('[data-list="global.footer.keywords"], [data-list="pages.home.footerKeywords"]').forEach((el) =>
+    renderMcnFooterKeywords(el, footerKeywords)
   )
   document.querySelectorAll('[data-list="global.menu"]').forEach((el) => {
     if (el.classList.contains('nav-links') || el.closest('.nav')) {

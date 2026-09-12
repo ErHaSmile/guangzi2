@@ -10,21 +10,44 @@
       "contact": "合作咨询"
     },
     "footer": {
-      "title": "LET'S GROW TOGETHER",
       "lead": "光子文化是国内领先的以\"达人BD + 自有主播\"双轮驱动的MCN机构，专注于为品牌提供全链路的直播电商解决方案。",
-      "brand": "GUANGZI.",
       "copyright": "© 2025 光子文化 GUANGZI MEDIA. All rights reserved.",
-      "beian": "",
-      "offices": [
+      "columns": [
         {
-          "title": "杭州总部",
-          "lines": [
-            "杭州市余杭区未来科技城",
-            "梦想小镇创业大街28号楼"
-          ],
-          "email": "business@guangzi-media.com",
-          "tel": "400-888-6666"
+          "title": "核心服务",
+          "linksLines": [
+            "达人商务对接|#services",
+            "自有主播矩阵|#talents",
+            "直播代运营|#live",
+            "短视频种草|#cases",
+            "选品供应链|#services",
+            "数据复盘优化|#data"
+          ]
+        },
+        {
+          "title": "关于我们",
+          "linksLines": [
+            "公司简介|#about",
+            "达人资源|#talents",
+            "成功案例|#cases",
+            "数据看板|#data",
+            "联系我们|#contact"
+          ]
+        },
+        {
+          "title": "联系方式",
+          "linksLines": [
+            "400-888-6666|#contact",
+            "business@guangzi-media.com|#contact",
+            "杭州市余杭区未来科技城|#contact"
+          ]
         }
+      ],
+      "keywords": [
+        "达人对接",
+        "直播带货",
+        "MCN机构",
+        "品牌增长"
       ]
     },
     "tel": "010-8596-8820",
@@ -1127,43 +1150,6 @@
         "短视频内容种草",
         "选品与供应链",
         "全案合作"
-      ],
-      "footerColumns": [
-        {
-          "title": "核心服务",
-          "linksLines": [
-            "达人商务对接|#services",
-            "自有主播矩阵|#talents",
-            "直播代运营|#live",
-            "短视频种草|#cases",
-            "选品供应链|#services",
-            "数据复盘优化|#data"
-          ]
-        },
-        {
-          "title": "关于我们",
-          "linksLines": [
-            "公司简介|#about",
-            "达人资源|#talents",
-            "成功案例|#cases",
-            "数据看板|#data",
-            "联系我们|#contact"
-          ]
-        },
-        {
-          "title": "联系方式",
-          "linksLines": [
-            "400-888-6666|#contact",
-            "business@guangzi-media.com|#contact",
-            "杭州市余杭区未来科技城|#contact"
-          ]
-        }
-      ],
-      "footerKeywords": [
-        "达人对接",
-        "直播带货",
-        "MCN机构",
-        "品牌增长"
       ],
       "dataCharts": {
         "trend": {

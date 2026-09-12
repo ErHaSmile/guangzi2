@@ -225,7 +225,7 @@ export const SITE_PAGE_UNITS = [
   {
     id: 'site-footer',
     label: '全站页尾',
-    description: '全站页脚文案、版权与办公地址',
+    description: '全站页脚导语、链接列、版权与关键词',
     group: '全站',
     kind: 'footer',
     section: 'pages',

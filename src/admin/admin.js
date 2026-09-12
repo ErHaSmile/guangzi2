@@ -282,9 +282,19 @@ const COMPONENT_JSON_SCOPES = {
       'contactCategoryOptions',
       'contactServiceOptions',
       'contactSuccessText',
-      'footerColumns',
-      'footerKeywords',
     ],
+  },
+  'site-nav': {
+    root: 'global',
+    keys: ['brandName', 'brandSub', 'tel', 'telLabel'],
+  },
+  'site-footer': {
+    root: 'global.footer',
+    keys: ['lead', 'copyright', 'columns', 'keywords'],
+  },
+  footer: {
+    root: 'global.footer',
+    keys: ['lead', 'copyright', 'columns', 'keywords'],
   },
 }
 
@@ -316,56 +326,71 @@ function resolveJsonScope(item) {
 
 function collectJsonScopeData(scope) {
   if (!scope) return null
-  if (scope.kind === 'customComponent') {
-    const inst = getCustomComponent(config, scope.id)
-    return inst ? clone(inst) : null
+  // JSON 模式始终读写组件库真实数据，不受菜单覆盖上下文影响
+  const prevCtx = contentEditContext
+  contentEditContext = null
+  try {
+    if (scope.kind === 'customComponent') {
+      const inst = getCustomComponent(config, scope.id)
+      return inst ? clone(inst) : null
+    }
+    if (scope.path) {
+      const val = getPath(config, scope.path)
+      return val == null ? null : clone(val)
+    }
+    const root = String(scope.root || '')
+    const keys = Array.isArray(scope.keys) ? scope.keys : []
+    const out = {}
+    keys.forEach((key) => {
+      const full = root ? `${root}.${key}` : key
+      const val = getPath(config, full)
+      out[key] = val === undefined ? null : clone(val)
+    })
+    return out
+  } finally {
+    contentEditContext = prevCtx
   }
-  if (scope.path) {
-    const val = getPath(config, scope.path)
-    return val == null ? null : clone(val)
-  }
-  const root = String(scope.root || '')
-  const keys = Array.isArray(scope.keys) ? scope.keys : []
-  const out = {}
-  keys.forEach((key) => {
-    const full = root ? `${root}.${key}` : key
-    const val = getPath(config, full)
-    out[key] = val === undefined ? null : clone(val)
-  })
-  return out
 }
 
 function applyJsonScopeData(scope, parsed) {
   if (!scope || parsed == null || typeof parsed !== 'object' || Array.isArray(parsed)) {
     throw new Error('JSON 须为对象')
   }
-  if (scope.kind === 'customComponent') {
-    const cur = getCustomComponent(config, scope.id)
-    if (!cur) throw new Error('未找到该图片组件')
-    const next = { ...parsed, id: cur.id, type: cur.type || parsed.type || 'gallery' }
-    updateCustomComponent(config, scope.id, next)
-    return
+  const prevCtx = contentEditContext
+  contentEditContext = null
+  try {
+    if (scope.kind === 'customComponent') {
+      const cur = getCustomComponent(config, scope.id)
+      if (!cur) throw new Error('未找到该图片组件')
+      const next = { ...parsed, id: cur.id, type: cur.type || parsed.type || 'gallery' }
+      updateCustomComponent(config, scope.id, next)
+      return
+    }
+    if (scope.path) {
+      setPath(config, scope.path, parsed)
+      return
+    }
+    const root = String(scope.root || '')
+    const keys = Array.isArray(scope.keys) ? scope.keys : Object.keys(parsed)
+    keys.forEach((key) => {
+      if (!Object.prototype.hasOwnProperty.call(parsed, key)) return
+      const full = root ? `${root}.${key}` : key
+      setPath(config, full, parsed[key])
+    })
+    Object.keys(parsed).forEach((key) => {
+      if (keys.includes(key)) return
+      const full = root ? `${root}.${key}` : key
+      setPath(config, full, parsed[key])
+    })
+    if (root === 'global' || keys.includes('tel') || keys.includes('telLabel')) {
+      syncMenuAssembly(config)
+    }
+  } finally {
+    contentEditContext = prevCtx
   }
-  if (scope.path) {
-    setPath(config, scope.path, parsed)
-    return
-  }
-  const root = String(scope.root || '')
-  const keys = Array.isArray(scope.keys) ? scope.keys : Object.keys(parsed)
-  keys.forEach((key) => {
-    if (!Object.prototype.hasOwnProperty.call(parsed, key)) return
-    const full = root ? `${root}.${key}` : key
-    setPath(config, full, parsed[key])
-  })
-  // 允许 AI 多写同 root 下的额外字段
-  Object.keys(parsed).forEach((key) => {
-    if (keys.includes(key)) return
-    const full = root ? `${root}.${key}` : key
-    setPath(config, full, parsed[key])
-  })
 }
 
-function createComponentJsonPanel(item, { onApplied } = {}) {
+function createComponentJsonPanel(item) {
   const scope = resolveJsonScope(item)
   const wrap = document.createElement('div')
   wrap.className = 'component-json-panel'
@@ -379,77 +404,49 @@ function createComponentJsonPanel(item, { onApplied } = {}) {
   const note = document.createElement('p')
   note.className = 'section-note'
   note.textContent =
-    '完整组件数据（可复制给 AI 批量改）。点「应用 JSON」写回配置并刷新预览；记得再点保存入库。'
+    '完整组件数据，可复制给 AI 批量修改。修改后点「保存」写入数据库并生效；不保存则丢弃。'
   const ta = document.createElement('textarea')
   ta.className = 'component-json-editor'
   ta.spellcheck = false
   ta.setAttribute('aria-label', '组件 JSON')
-  const status = document.createElement('p')
-  status.className = 'component-json-status'
-  status.hidden = true
+
+  let jsonDirty = false
 
   const syncText = () => {
     const data = collectJsonScopeData(scope)
     ta.value = JSON.stringify(data, null, 2)
-    status.hidden = true
+    jsonDirty = false
   }
   syncText()
 
-  const actions = document.createElement('div')
-  actions.className = 'component-json-actions'
-  const applyBtn = document.createElement('button')
-  applyBtn.type = 'button'
-  applyBtn.className = 'btn btn-primary'
-  applyBtn.textContent = '应用 JSON'
-  const reloadBtn = document.createElement('button')
-  reloadBtn.type = 'button'
-  reloadBtn.className = 'btn'
-  reloadBtn.textContent = '重新读取'
-  const copyBtn = document.createElement('button')
-  copyBtn.type = 'button'
-  copyBtn.className = 'btn'
-  copyBtn.textContent = '复制'
+  const markJsonDirty = () => {
+    jsonDirty = true
+    markDirty()
+  }
+  ta.addEventListener('input', markJsonDirty)
+  ta.addEventListener('change', markJsonDirty)
+  ta.addEventListener('paste', () => {
+    // paste 后 value 才更新
+    queueMicrotask(markJsonDirty)
+  })
 
-  const setStatus = (msg, ok = true) => {
-    status.hidden = !msg
-    status.textContent = msg || ''
-    status.classList.toggle('is-err', !ok)
-    status.classList.toggle('is-ok', !!ok && !!msg)
+  const flush = () => {
+    const raw = String(ta.value || '').trim()
+    if (!raw) throw new Error('JSON 为空')
+    let parsed
+    try {
+      parsed = JSON.parse(raw)
+    } catch {
+      throw new Error('JSON 格式无效，请检查后再保存')
+    }
+    applyJsonScopeData(scope, parsed)
+    jsonDirty = false
   }
 
-  applyBtn.addEventListener('click', () => {
-    try {
-      const parsed = JSON.parse(ta.value)
-      applyJsonScopeData(scope, parsed)
-      markDirty()
-      schedulePreview()
-      syncText()
-      setStatus('已应用，预览已更新', true)
-      onApplied?.()
-      notify('JSON 已应用到组件', 'ok')
-    } catch (err) {
-      setStatus(err?.message || 'JSON 无效', false)
-      notify(err?.message || 'JSON 无效', 'err')
-    }
-  })
-  reloadBtn.addEventListener('click', () => {
-    syncText()
-    setStatus('已从当前配置重新读取', true)
-  })
-  copyBtn.addEventListener('click', async () => {
-    try {
-      await navigator.clipboard.writeText(ta.value)
-      setStatus('已复制到剪贴板', true)
-      notify('已复制 JSON', 'ok')
-    } catch {
-      ta.select()
-      setStatus('复制失败，已选中文本可手动 Ctrl+C', false)
-    }
-  })
-
-  actions.append(applyBtn, reloadBtn, copyBtn)
-  wrap.append(note, ta, actions, status)
+  wrap.append(note, ta)
   wrap._reloadJson = syncText
+  wrap._flushJson = flush
+  wrap._isJsonDirty = () => jsonDirty
   return wrap
 }
 
@@ -459,6 +456,7 @@ function wrapEditorWithJsonMode(item, formNode) {
 
   const shell = document.createElement('div')
   shell.className = 'editor-mode-shell'
+  shell.dataset.editorMode = 'form'
 
   const tabs = document.createElement('div')
   tabs.className = 'editor-mode-tabs'
@@ -488,6 +486,7 @@ function wrapEditorWithJsonMode(item, formNode) {
 
   const setMode = (mode) => {
     const isJson = mode === 'json'
+    shell.dataset.editorMode = isJson ? 'json' : 'form'
     formTab.classList.toggle('is-active', !isJson)
     jsonTab.classList.toggle('is-active', isJson)
     formTab.setAttribute('aria-selected', String(!isJson))
@@ -497,12 +496,21 @@ function wrapEditorWithJsonMode(item, formNode) {
     if (isJson) {
       jsonPanel._reloadJson?.()
     } else {
-      // 从 JSON 切回表单时重建，避免仍显示旧字段值
+      // 回表单：未保存的 JSON 草稿丢弃，按当前配置重建
       formPane.replaceChildren(item.build())
     }
   }
   formTab.addEventListener('click', () => setMode('form'))
   jsonTab.addEventListener('click', () => setMode('json'))
+
+  // 有未保存 JSON 草稿，或当前在 JSON 页时，保存前写回
+  shell._flushJsonIfNeeded = () => {
+    const dirty = jsonPanel._isJsonDirty?.()
+    const onJson = shell.dataset.editorMode === 'json'
+    if (!dirty && !onJson) return
+    if (typeof jsonPanel._flushJson !== 'function') return
+    jsonPanel._flushJson()
+  }
 
   shell.append(tabs, formPane, jsonPane)
   return shell
@@ -3430,7 +3438,7 @@ function openPageUnitEditor(unit, opts = {}) {
       {
         id: 'site-nav',
         label: getPageUnitLabel(config, unit) || '全站导航',
-        hint: '顶栏 Logo 与导航链接显隐 / 左右分区',
+        hint: '顶栏 Logo、热线电话与导航链接',
         build: () => buildSiteNavEditor(),
         styleUnitId: unit.id,
         editContext: opts.slotId ? { slotId: opts.slotId, unitId: unit.id } : null,
@@ -3444,7 +3452,7 @@ function openPageUnitEditor(unit, opts = {}) {
       {
         id: 'site-footer',
         label: getPageUnitLabel(config, unit) || '全站页尾',
-        hint: '页尾文案与办公地址',
+        hint: '页尾导语、链接列、版权与关键词',
         build: () => buildSiteFooterEditor(),
         styleUnitId: unit.id,
         editContext: opts.slotId ? { slotId: opts.slotId, unitId: unit.id } : null,
@@ -3647,7 +3655,7 @@ function buildPageCatalog() {
             openEditorModal({
               id: 'site-footer',
               label: '全站页尾',
-              hint: '页尾默认文案与办公地址',
+              hint: '页尾导语、链接列、版权与关键词',
               build: () => buildSiteFooterEditor(),
               styleUnitId: unit.id,
             })
@@ -4045,9 +4053,41 @@ function buildSiteNavEditor() {
   const wrap = document.createElement('div')
   wrap.className = 'edit-block site-nav-editor'
 
-  wrap.appendChild(sectionNote('顶栏 Logo 文案（全站统一），以及 Logo 两侧导航链接的显隐与分区。'))
+  wrap.appendChild(sectionNote('顶栏 Logo 文案、右侧热线按钮，以及导航链接的显隐与分区。'))
   wrap.appendChild(field('品牌名（英文主标题 / Logo）', 'global.brandName'))
   wrap.appendChild(field('副标题（中文 / Logo）', 'global.brandSub'))
+  wrap.appendChild(
+    createControl({
+      label: '顶栏热线电话',
+      type: 'text',
+      hint: '显示在顶栏最右侧黑底按钮（如 010-8596-8820）。留空则不显示该按钮。',
+      placeholder: '010-8596-8820',
+      value: getPath(config, 'global.tel') ?? '',
+      onStatus: setStatus,
+      onChange: (next) => {
+        setPath(config, 'global.tel', String(next || '').trim())
+        syncMenuAssembly(config)
+        markDirty()
+        schedulePreview()
+      },
+    })
+  )
+  wrap.appendChild(
+    createControl({
+      label: '热线按钮文案（可选）',
+      type: 'text',
+      hint: '留空则自动为「TEL：电话号码」；可改成如「立即致电」等。',
+      placeholder: 'TEL：010-8596-8820',
+      value: getPath(config, 'global.telLabel') ?? '',
+      onStatus: setStatus,
+      onChange: (next) => {
+        setPath(config, 'global.telLabel', String(next || '').trim())
+        syncMenuAssembly(config)
+        markDirty()
+        schedulePreview()
+      },
+    })
+  )
   wrap.appendChild(
     sectionNote('下方维护顶部导航栏链接。菜单名称与链接请到「菜单维护」修改。')
   )
@@ -4198,25 +4238,31 @@ function buildSiteNavEditor() {
   return wrap
 }
 
-/** 全站页尾默认内容（仅页尾自身：文案 + 办公地址） */
+/** 全站页尾：官网实际展示的导语、链接列、版权与关键词 */
 function buildSiteFooterEditor() {
   return block('', [
-    sectionNote('仅维护页尾组件自身文案与办公地址。顶栏 Logo 在「全站导航」；各办公室电话在下方地址列表中维护。'),
-    field('页尾标题', 'global.footer.title'),
-    field('页尾导语', 'global.footer.lead', 'textarea', { rows: 3, hint: '支持换行，前台按行展示' }),
-    field('页尾品牌字', 'global.footer.brand'),
-    field('版权', 'global.footer.copyright'),
-    field('备案号', 'global.footer.beian'),
+    sectionNote('仅维护官网页尾展示文案。页尾 Logo 字标在「全站导航」；合作咨询区文案在「合作咨询」组件。'),
+    field('页尾导语', 'global.footer.lead', 'textarea', {
+      rows: 3,
+      hint: '支持换行，显示在页尾品牌区',
+    }),
     listEditor({
-      title: '办公地址',
-      path: 'global.footer.offices',
-      blank: { title: '新地址', lines: ['地址行1'], email: '', tel: '' },
+      title: '页尾链接列',
+      path: 'global.footer.columns',
+      blank: { title: '新列', linksLines: ['链接文案|#'] },
       fields: [
-        { key: 'title', label: '标题' },
-        { key: 'lines', label: '地址行', type: 'lines' },
-        { key: 'email', label: '邮箱' },
-        { key: 'tel', label: '电话' },
+        { key: 'title', label: '列标题' },
+        {
+          key: 'linksLines',
+          label: '链接（每行：文案|链接）',
+          type: 'lines',
+          full: true,
+        },
       ],
+    }),
+    field('版权', 'global.footer.copyright'),
+    field('页脚关键词', 'global.footer.keywords', 'lines', {
+      hint: '每行一个关键词，显示在版权旁',
     }),
   ])
 }
@@ -4263,7 +4309,7 @@ function buildMenuAssemblyEditor() {
         openEditorModal({
           id: 'footer',
           label: '页尾文案',
-          hint: '全站页尾组件默认内容',
+          hint: '导语 / 链接列 / 版权 / 关键词',
           category: '页脚',
           build: () => buildSiteFooterEditor(),
           styleUnitId: unit?.id || unitId,
@@ -4272,7 +4318,7 @@ function buildMenuAssemblyEditor() {
         openEditorModal({
           id: 'site-nav',
           label: '全站导航',
-          hint: '顶栏 Logo 与导航链接显隐 / 左右分区',
+          hint: '顶栏 Logo、热线电话与导航链接',
           category: '导航',
           build: () => buildSiteNavEditor(),
           styleUnitId: unit?.id || unitId,
@@ -5314,23 +5360,6 @@ function getConfigItems(sectionId) {
               hint: '每行一个选项',
             }),
             field('提交成功提示', 'pages.home.contactSuccessText'),
-            listEditor({
-              title: '页脚链接列',
-              path: 'pages.home.footerColumns',
-              blank: { title: '新列', linksLines: ['链接文案|#'] },
-              fields: [
-                { key: 'title', label: '列标题' },
-                {
-                  key: 'linksLines',
-                  label: '链接（每行：文案|链接）',
-                  type: 'lines',
-                  full: true,
-                },
-              ],
-            }),
-            field('页脚关键词', 'pages.home.footerKeywords', 'lines', {
-              hint: '每行一个关键词，显示在版权旁',
-            }),
           ]),
       },
     ])
@@ -6757,6 +6786,15 @@ async function saveConfigToDb() {
     return false
   }
   try {
+    // 顶栏「保存到数据库」或弹窗保存：先提交打开中的 JSON 草稿
+    document.querySelectorAll('.editor-mode-shell').forEach((shell) => {
+      shell._flushJsonIfNeeded?.()
+    })
+  } catch (err) {
+    notify(err?.message || 'JSON 无效，请检查后再保存', 'err')
+    return false
+  }
+  try {
     setStatus('正在写入数据库…', true, { toast: false })
     Object.keys(PAGE_BLOCKS).forEach((pk) => ensurePageBlocks(config, pk))
     // 先把组装槽位的顶栏名写回 global.nav，再 normalize，避免保存时被旧 nav 覆盖
@@ -6767,6 +6805,10 @@ async function saveConfigToDb() {
     await saveRemoteConfig(config)
     dirty = false
     pushConfigToPreview()
+    // 保存成功后，刷新打开中的 JSON 显示为已入库内容
+    document.querySelectorAll('.component-json-panel').forEach((panel) => {
+      panel._reloadJson?.()
+    })
     notify(`已保存到 MySQL（v${configMeta.version ?? '?'}）`, 'ok')
     return true
   } catch (err) {
