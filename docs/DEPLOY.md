@@ -125,11 +125,23 @@ curl -s http://127.0.0.1:8788/health
 # 项目 1
 cd /opt/sites/guanzi && ./update.sh
 
-# 项目 2
-cd /opt/sites/guanzi_2 && ./update.sh
+# 项目 2：一键更新并启动（pull → install → migrate → build → pm2）
+cd /opt/sites/guanzi_2
+chmod +x update.sh start.sh scripts/*.sh   # 仅首次或 Permission denied 时
+./update.sh
+
+# 仅重启、不拉代码
+./start.sh
+
+# 分支分叉（部署机可丢弃本地提交）
+FORCE_RESET=1 ./update.sh
+
+# origin 误指项目1时纠正为 guangzi2
+FIX_REMOTE=1 ./update.sh
 ```
 
 `db:migrate` **不会覆盖**已有 `site_config`。
+验收：`curl -s http://127.0.0.1:8788/health` 应含 `"db":"guangzi_2"`。
 
 ---
 

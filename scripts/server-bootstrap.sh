@@ -11,11 +11,11 @@ if [ -f "$ROOT_HINT/scripts/server-common.sh" ]; then
 fi
 
 SITE_ROOT="${SITE_ROOT:-/opt/sites}"
-APP_NAME="${APP_NAME:-guanzi}"
+APP_NAME="${APP_NAME:-guanzi_2}"
 BRANCH="${DEPLOY_BRANCH:-main}"
 APP_DIR="${SITE_ROOT}/${APP_NAME}"
 # 默认用 SSH 别名（Deploy Key）；可用 REPO_URL 覆盖
-REPO_URL="${REPO_URL:-git@github.com-guanzi:ErHaSmile/guanzi.git}"
+REPO_URL="${REPO_URL:-git@github.com-guanzi2:ErHaSmile/guangzi2.git}"
 
 echo "[bootstrap] multi-app layout"
 echo "  SITE_ROOT = $SITE_ROOT"
@@ -59,27 +59,27 @@ else
     echo "[bootstrap] clone failed. Run first:"
     echo "  bash scripts/server-ssh-setup.sh"
     echo "  # add the printed pubkey to GitHub Deploy keys"
-    echo "  ssh -T git@github.com-guanzi"
+    echo "  ssh -T git@github.com-guanzi2"
     exit 1
   fi
   cd "$APP_DIR"
 fi
 
 mkdir -p "$APP_DIR/logs"
-chmod +x "$APP_DIR"/scripts/*.sh "$APP_DIR"/update.sh 2>/dev/null || true
+chmod +x "$APP_DIR"/scripts/*.sh "$APP_DIR"/update.sh "$APP_DIR"/start.sh 2>/dev/null || true
 
 if [ ! -f "$APP_DIR/.env" ]; then
   cp "$APP_DIR/.env.example" "$APP_DIR/.env"
   echo "[bootstrap] wrote $APP_DIR/.env — edit MySQL / tokens, then:"
   echo "  cd $APP_DIR && ./scripts/server-setup.sh"
-  echo "  pm2 start ecosystem.config.cjs"
+  echo "  ./start.sh"
 else
   echo "[bootstrap] .env exists — run setup if needed:"
   echo "  cd $APP_DIR && ./scripts/server-setup.sh"
 fi
 
 if ! grep -q "$APP_DIR" "$INVENTORY" 2>/dev/null; then
-  echo "${APP_DIR} | ${REPO_URL} | 8787 | ${APP_NAME}" >> "$INVENTORY"
+  echo "${APP_DIR} | ${REPO_URL} | 8788 | ${APP_NAME}" >> "$INVENTORY"
 fi
 
 echo "[bootstrap] done → cd $APP_DIR"

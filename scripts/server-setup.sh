@@ -31,6 +31,6 @@ echo "[setup] build ..."
 npm run build
 
 echo "[setup] done"
-echo "  Start:  pm2 start ecosystem.config.cjs"
+echo "  Start:  ./start.sh"
 echo "  Update: ./update.sh"
 echo "  Logs:   $LOG_DIR"

@@ -15,7 +15,8 @@
 ----
 - 目录名 = APP_NAME = PM2 进程名
 - 每项目独立 `.env`（库名、端口、token 全部错开）
-- 更新：`cd /opt/sites/guanzi_2 && ./update.sh`
+- 更新：`cd /opt/sites/guanzi_2 && ./update.sh`（一键 pull + 构建 + 重启）
+- 仅重启：`./start.sh`
 
 Clone（项目 2）
 --------------
